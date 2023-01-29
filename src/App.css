@@ -1,12 +1,19 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Public Sans', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
   background-color: #343a40;
-  font-family: 'Public Sans', sans-serif;
   color: #FFF;
+  transition: all 0.3s ease 0s;
+  overflow-x: inherit;
 }
 
 a {
