@@ -101,7 +101,7 @@ const ContactSubmit = styled.button`
   cursor: pointer;
   transition: all 0.3s ease 0s;
   font-size: 16px;
-  color: #F8F9FA;
+  color: #e9ecef;
   margin-top: -6px;
   font-weight: 600;
   letter-spacing: 0.5px;

@@ -111,7 +111,7 @@ const HeroTitle = styled.h1`
   }
   :last-of-type ${HeroTitleSpan} {
     /* margin-left: -200px; */
-    animation: ${slidein} 2s infinite;
+    animation: ${slidein} 2.4s infinite;
     animation-iteration-count: 1;
   }
   @media (max-width: 1300px){
@@ -162,21 +162,47 @@ const HeroButton = styled.button`
   border: none;
   border-radius: 4px;
   padding: 12px 0;
-  width: 120px;
+  width: 140px;
   background-color: #FF9900;
-  color: #F8F9FA;
+  color: #e9ecef;
   font-weight: 600;
   transition: all 0.3s ease 0s;
   font-size: 15px;
   letter-spacing: 0.5px;
   cursor: pointer;
+  a {
+    :last-of-type button {
+      background-color: pink;
+    }
+  }
   :hover {
     background-color: #FFA600;
   }
-  @media (max-width: 800px){
-    width: 30%;
-    min-width: 100px;
+  @media (max-width: 500px){
+    width: 120px;
   }
+`
+const HeroButtonCV = styled.button`
+  border: none;
+  border-radius: 4px;
+  padding: 10px 0;
+  width: 140px;
+  background-color: transparent;
+  color: #e9ecef;
+  font-weight: 600;
+  transition: all 0.3s ease 0s;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border: 2px solid #FF9900;
+  :hover {
+    background-color: #FFA600;
+    border: 2px solid #FFA600;
+  }
+  @media (max-width: 500px){
+    width: 120px;
+  }
+  @media (max-width: px){}
 `
 
 const Hero = () => {
@@ -201,8 +227,8 @@ const Hero = () => {
               <a href="#contact">
                 <HeroButton>Contrátame</HeroButton>
               </a>
-              <a href="">
-                <HeroButton>Mi CV</HeroButton>
+              <a href="https://drive.google.com/file/d/1kPyJGFlNaq3_wnxgKyHrE4xSAZ40KFlv/view?usp=sharing" target="_blank">
+                <HeroButtonCV>Mi CV</HeroButtonCV>
               </a>
             </HeroButtons>
           </HeroItem>

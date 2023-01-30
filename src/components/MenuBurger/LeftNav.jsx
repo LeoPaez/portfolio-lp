@@ -53,13 +53,13 @@ const LeftNav = ({ open}) => {
       <a href="#contact">
         <li>Contacto</li>
       </a>
-      <a href="https://www.linkedin.com/in/leonel-paez/">
+      <a href="https://www.linkedin.com/in/leonel-paez/" target="_blank">
         <li>LinkedIn</li>
       </a>
-      <a href="https://github.com/LeoPaez">
+      <a href="https://github.com/LeoPaez" target="_blank">
         <li>GitHub</li>
       </a>
-      <a href="https://walink.co/9e973f">
+      <a href="https://walink.co/9e973f" target="_blank">
         <li>WhatsApp</li>
       </a>
     </Ul>

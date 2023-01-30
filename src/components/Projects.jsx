@@ -92,12 +92,13 @@ const ProjectImg = styled.img`
   border-radius: 6px;
 `
 const ProjectName = styled.p`
-  font-size: 26px;
+  font-size: 20px;
   @media (max-width: 500px){
     font-size: 22px;
   }
 `
 const ProjectInfo = styled.p`
+  width: 80%;
   text-align: center;
   color: #E9ECEF;
   @media (max-width: 500px){
@@ -136,15 +137,16 @@ const DemoBtn = styled.button`
   justify-content: center;
   align-items: center;
   gap: 6px;
-  color: #F8F9FA;
+  color: #e9ecef;
   padding: 10px 16px;
   border-radius: 6px;
-  background-color: #FF9900;
-  border: 1px solid #FF9900;
+  background-color: transparent;
+  border: 2px solid #FF9900;
   font-size: 15px;
+  transition: all 0.3s ease 0s;
   :hover {
     background-color: #FFA600;
-    border: 1px solid #FFA600;
+    border: 2px solid #FFA600;
   }
 `
 const DemoBtnIcon = styled.img`
@@ -152,17 +154,18 @@ const DemoBtnIcon = styled.img`
 `
 const GHBtn = styled.button`
   background-color: transparent;
-  color: #F8F9FA;
+  color: #e9ecef;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6px;
-  border: 1px solid #F8F9FA;
+  border: 2px solid #e9ecef;
   border-radius: 6px;
   padding: 10px 10px;
   font-size: 15px;
+  transition: all 0.3s ease 0s;
   :hover {
-    opacity: 0.8;
+    background-color: rgba(33, 37, 41, 0.4);
   }
 `
 const GHBtnIcon = styled.img`
@@ -173,9 +176,9 @@ const MoreProjectsBtn = styled.button`
   padding: 10px 60px;
   font-size: 15px;
   letter-spacing: 0.8px;
-  background-color: #FF9900;
-  color: #F8F9FA;
-  border: none;
+  background-color: transparent;
+  border: 2px solid #FF9900;
+  color: #e9ecef;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 600;
@@ -183,6 +186,7 @@ const MoreProjectsBtn = styled.button`
   border-radius: 4px;
   :hover {
     background-color: #FFA600;
+    border: 2px solid #FFA600;
   }
 `
 
@@ -311,7 +315,9 @@ const Projects = () => {
               </ContentDetails>
             </Project>
           </ProjectsCont>
-          <MoreProjectsBtn>Ver más</MoreProjectsBtn>
+          <a href="https://github.com/LeoPaez" target="_blank">
+            <MoreProjectsBtn>Ver más</MoreProjectsBtn>
+          </a>
         </Cont>
       </Flex>
     </>

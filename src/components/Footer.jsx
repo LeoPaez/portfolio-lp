@@ -59,13 +59,13 @@ const Footer = () => {
           <FooterRights>©2023 Todos los derechos reservados</FooterRights>
         </FooterCont>
         <FooterCont>
-          <Social href="https://www.linkedin.com/in/leonel-paez/">
+          <Social href="https://www.linkedin.com/in/leonel-paez/" target="_blank">
             <SocialLogo src={Linkedin} />
           </Social>
-          <Social href="https://github.com/LeoPaez">
+          <Social href="https://github.com/LeoPaez" target="_blank">
             <SocialLogo src={GitHub} />
           </Social>
-          <Social href="https://walink.co/9e973f">
+          <Social href="https://walink.co/9e973f" target="_blank">
             <SocialLogo src={Wpp} />
           </Social>
         </FooterCont>

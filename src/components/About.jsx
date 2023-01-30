@@ -81,7 +81,7 @@ const AboutTitle = styled.h3`
   font-size: 26px;
   border-bottom: 1px solid #343a40;
   padding: 0 50px 8px 50px;
-  margin: 0 auto 30px;
+  margin: -20px auto 40px;
   @media (max-width: 900px){
     margin: 0 auto;
   }
@@ -239,6 +239,7 @@ const Tool = styled.span`
     transform:  scale(.6) translateY(40%);  
     width: auto;
     text-align: center;
+    font-size: 14px;
   }
   :hover::after,
   :focus::after  {
