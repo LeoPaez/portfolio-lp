@@ -7,7 +7,7 @@ import ReactIcon from "../assets/langs/react.png"
 import Chakra from "../assets/langs/chakra-ui.png"
 import Styled from "../assets/langs/styled.png"
 import ReactRouter from "../assets/langs/react-router.png"
-import Vite from "../assets/langs/vite.png"
+import Tailwind from "../assets/langs/tailwind.png"
 
 const Flex = styled.div`
   display: flex;
@@ -286,8 +286,8 @@ const About = () => {
                 <Tool data-tip="React Router">
                   <SkillsLogo src={ReactRouter} />
                 </Tool>
-                <Tool data-tip="Vite">
-                  <SkillsLogo src={Vite} />
+                <Tool data-tip="Tailwind">
+                  <SkillsLogo src={Tailwind} />
                 </Tool>
                 <Tool data-tip="ChakraUI">
                   <SkillsLogo src={Chakra} />

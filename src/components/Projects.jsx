@@ -1,14 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+// langs icons
 import HTML from "../assets/langs/html-basic.png"
 import CSS from "../assets/langs/css-basic.png"
 import JS from "../assets/langs/js-basic.png"
-// import ReactIcon from "../assets/langs/react-basic.png"
+import ReactIcon from "../assets/langs/react-basic.png"
+import Tailwind from "../assets/langs/tailwind-basic.png"
+// icons
 import GitHub from "../assets/social/github.png"
 import ArrowRight from "../assets/icons/arrow-right.png"
+// projects
+import Oasis from "../assets/projects/hotel-oasis.png"
 import HighTech from "../assets/projects/high-tech.png"
 import Zappi from "../assets/projects/zappi.png"
-import FrontEndStore from "../assets/projects/frontend-store.png"
 import BlogDeCafe from "../assets/projects/blogdecafe.png"
 
 const Flex = styled.div`
@@ -58,6 +62,12 @@ const ContentDetails = styled.div`
   :hover {
     opacity: 1;
   }
+  @media (max-width: 1100px){
+    gap: 14px;
+  }
+  @media (max-width: 900px){
+    gap: 20px;
+  }
 `
 const ProjectsTitle = styled.h2`
   font-size: 26px;
@@ -101,6 +111,9 @@ const ProjectInfo = styled.p`
   width: 80%;
   text-align: center;
   color: #E9ECEF;
+  @media (min-width: 1000px) and (max-width: 1050px){
+    width: 90%;
+  }
   @media (max-width: 500px){
     font-size: 15px;
   }
@@ -198,12 +211,42 @@ const Projects = () => {
         <Cont id="projects">
           <ProjectsTitle>Proyectos</ProjectsTitle>
           <ProjectsCont>
+          <Project>
+              <ProjectImg src={Oasis} />
+              <ContentDetails>
+                <ProjectName>Hotel Oasis</ProjectName>
+                <ProjectInfo>
+                  Hotel Oasis es una página donde puedes alquilar habitaciones de lujo y filtrarlas segun tus necesidades
+                </ProjectInfo>
+                <ProjectLangs>
+                  <ProjectLang src={HTML} />
+                  <ProjectLang src={CSS} />
+                  <ProjectLang src={JS} />
+                  <ProjectLang src={ReactIcon} />
+                  <ProjectLang src={Tailwind} />
+                </ProjectLangs>
+                <ProjectLinks>
+                  <a href="https://github.com/LeoPaez/frontendpage" target="_blank">
+                    <GHBtn>
+                      <GHBtnIcon src={GitHub} />
+                      GitHub
+                    </GHBtn>
+                  </a>
+                  <a href="https://front-end-store1.vercel.app/" target="_blank">
+                    <DemoBtn>
+                      Demo
+                      <DemoBtnIcon src={ArrowRight} />
+                    </DemoBtn>
+                  </a>
+                </ProjectLinks>
+              </ContentDetails>
+            </Project>
             <Project>
               <ProjectImg src={HighTech} />
               <ContentDetails>
                 <ProjectName>HighTech</ProjectName>
                 <ProjectInfo>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu ullamcorper felis.
+                  Tienda de Hardware donde puedes conseguir todo tipo de componentes para tu computadora
                 </ProjectInfo>
                 <ProjectLangs>
                   <ProjectLang src={HTML} />
@@ -232,7 +275,7 @@ const Projects = () => {
               <ContentDetails>
                 <ProjectName>Zappi</ProjectName>
                 <ProjectInfo>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu ullamcorper felis.
+                  Ecommerce de comida donde puedes comprar diversos tipos de comida según tus gustos
                 </ProjectInfo>
                 <ProjectLangs>
                   <ProjectLang src={HTML} />
@@ -257,40 +300,11 @@ const Projects = () => {
               </ContentDetails>
             </Project>
             <Project>
-              <ProjectImg src={FrontEndStore} />
-              <ContentDetails>
-                <ProjectName>FrontEnd Store</ProjectName>
-                <ProjectInfo>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu ullamcorper felis.
-                </ProjectInfo>
-                <ProjectLangs>
-                  <ProjectLang src={HTML} />
-                  <ProjectLang src={CSS} />
-                  {/* <ProjectLang src={JS} /> */}
-                  {/* <ProjectLang src={ReactIcon} /> */}
-                </ProjectLangs>
-                <ProjectLinks>
-                  <a href="https://github.com/LeoPaez/frontendpage" target="_blank">
-                    <GHBtn>
-                      <GHBtnIcon src={GitHub} />
-                      GitHub
-                    </GHBtn>
-                  </a>
-                  <a href="https://front-end-store1.vercel.app/" target="_blank">
-                    <DemoBtn>
-                      Demo
-                      <DemoBtnIcon src={ArrowRight} />
-                    </DemoBtn>
-                  </a>
-                </ProjectLinks>
-              </ContentDetails>
-            </Project>
-            <Project>
               <ProjectImg src={BlogDeCafe} />
               <ContentDetails>
                 <ProjectName>Blog de Café</ProjectName>
                 <ProjectInfo>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu ullamcorper felis.
+                  Blog de Café es un sitio donde puedas aprender diversas técnicas para preparar café con cursos y talleres
                 </ProjectInfo>
                 <ProjectLangs>
                   <ProjectLang src={HTML} />
