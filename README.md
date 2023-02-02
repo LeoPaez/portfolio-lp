@@ -1,7 +1,8 @@
 # Portfolio Personal
 
-### Portfolio hecho con React con información acerca de mi, mis skills y proyectos propios.
+### Portfolio con información acerca de mi, mis skills y proyectos propios.
 Librerias y herramientas usadas:
+- React
 - Vite
 - Styled Components
 - Framer Motion
