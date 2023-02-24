@@ -1,4 +1,4 @@
-# Portfolio Personal
+# Portfolio
 
 ### Portfolio con información acerca de mi, mis skills y proyectos propios.
 Librerias y herramientas usadas:
@@ -7,3 +7,4 @@ Librerias y herramientas usadas:
 - Styled Components
 - Framer Motion
 - SweetAlert 2
+- ReactTooltip
