@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ContactDraw from "../assets/contact-img.svg"
 import Location from "../assets/icons/location.png"
 import Email from "../assets/icons/email.png"
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2"
 import Input from './Inputs/Input'
 import Textarea from './Inputs/Textarea'
 
@@ -143,6 +143,9 @@ const Contact = () => {
         html: "<b>No completaste todos los campos del formulario</b>",
         icon: "error",
         confirmButtonColor: "#4BB543",
+        scrollbarPadding: false,
+        background: "#343a40",
+        color: "#f8f9fa"
       })
 		}
 	}
