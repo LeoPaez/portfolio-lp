@@ -220,8 +220,6 @@ const Projects = () => {
                   Hotel Oasis es una página donde puedes alquilar habitaciones de lujo y filtrarlas segun tus necesidades
                 </ProjectInfo>
                 <ProjectLangs>
-                  <ProjectLang src={HTML} />
-                  <ProjectLang src={CSS} />
                   <ProjectLang src={JS} />
                   <ProjectLang src={ReactIcon} />
                   <ProjectLang src={Tailwind} />
@@ -279,8 +277,6 @@ const Projects = () => {
                   Esta App es un Crud donde se puede añadir usuarios, editarlos, fitrarlos y eliminarlos 
                 </ProjectInfo>
                 <ProjectLangs>
-                  <ProjectLang src={HTML} />
-                  <ProjectLang src={CSS} />
                   <ProjectLang src={JS} />
                   <ProjectLang src={ReactIcon} />
                   <ProjectLang src={Material} />
