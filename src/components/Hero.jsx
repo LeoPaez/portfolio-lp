@@ -14,6 +14,14 @@ const slidein = keyframes`
   90% { margin-left:-0px; }
   100% { margin-left:-0px; }
 `
+const rotate = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`
 
 const Flex = styled.div`
   display: flex;
@@ -53,6 +61,7 @@ const HeroItem = styled.div`
   width: 45%;
   :last-of-type {
     align-items: center;
+
   }
   @media (max-width: 1100px){
     width: 48%;
@@ -64,7 +73,23 @@ const HeroItem = styled.div`
     width: 100%;
   }
 `
+const HeroBackGround = styled.div`
+  width: 300px;
+  height: 300px;
+  filter: blur(calc(250px / 5));
+  background: #1F1C2C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  animation: ${rotate} 30s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  position: absolute;
+  @media (max-width: 800px){
+    width: 260px;
+    height: 260px;
+  }
+`
 const HeroImg = styled.img`
+  z-index: 10;
   width: 400px;
   @media (max-width: 1300px){
     width: 380px;
@@ -233,6 +258,7 @@ const Hero = () => {
             </HeroButtons>
           </HeroItem>
           <HeroItem>
+            <HeroBackGround />
             <HeroImg src={HeroDraw} />
           </HeroItem>
         </HeroCont>
