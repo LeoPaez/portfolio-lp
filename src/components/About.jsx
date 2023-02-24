@@ -8,6 +8,9 @@ import Chakra from "../assets/langs/chakra-ui.png"
 import Styled from "../assets/langs/styled.png"
 import ReactRouter from "../assets/langs/react-router.png"
 import Tailwind from "../assets/langs/tailwind.png"
+import { motion } from "framer-motion"
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
 
 const Flex = styled.div`
   display: flex;
@@ -15,7 +18,7 @@ const Flex = styled.div`
   align-items: center;
   background-color: #212529;
 `
-const AboutCont = styled.div`
+const AboutCont = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -197,55 +200,6 @@ const SkillsLogo = styled.img`
     max-height: 42px;
   }
 `
-const Tool = styled.span`
-  cursor: help;
-  position: relative;
-  ::before,
-  ::after {
-    left: 50%;
-    opacity: 0;
-    position: absolute;
-  }
-  :hover::before,
-  :focus::before,
-  :hover::after,
-  :focus::after {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-  ::before {
-    border-style: solid;
-    border-width: 1em 0.75em 0 0.75em;
-    border-color: #3E474F transparent transparent transparent;
-    bottom: 100%;
-    content: "";
-    margin-left: -0.7em;
-    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26), opacity .65s .5s;
-    transform:  scale(.6) translateY(-90%);
-  }
-  :hover::before,
-  :focus::before {
-      transition: all .65s cubic-bezier(.84,-0.18,.31,1.26) .2s;
-  }
-  ::after {
-    background: #495057;
-    border-radius: .25em;
-    bottom: 130%;
-    color: #EDEFF0;
-    content: attr(data-tip);
-    margin-left: -36px;
-    padding: 1em;
-    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26) .2s;
-    transform:  scale(.6) translateY(40%);  
-    width: auto;
-    text-align: center;
-    font-size: 14px;
-  }
-  :hover::after,
-  :focus::after  {
-    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26);
-  }
-`
 
 const About = () => {
   return (
@@ -271,30 +225,70 @@ const About = () => {
             <AboutItem>
               <SkillsTitle>Skills</SkillsTitle>
               <SkillsCont>
-                <Tool data-tip="HTML">
+                <a 
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="HTML"
+                  data-tooltip-delay-show={100}
+                >
                   <SkillsLogo src={HTML} />
-                </Tool>
-                <Tool data-tip="CSS">
+                </a>
+                <Tooltip id="my-tooltip" />
+                <a 
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="CSS"
+                  data-tooltip-delay-show={100}
+                >
                   <SkillsLogo src={CSS} />
-                </Tool>
-                <Tool data-tip="JavaScript">
+                </a>
+                <Tooltip id="my-tooltip" />
+                <a 
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="JavaScript"
+                  data-tooltip-delay-show={100}
+                >
                   <SkillsLogo src={JS} />
-                </Tool>
-                <Tool data-tip="React">
+                </a>
+                <Tooltip id="my-tooltip" />
+                <a 
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="React"
+                  data-tooltip-delay-show={100}
+                >
                   <SkillsLogo src={ReactIcon} />
-                </Tool>
-                <Tool data-tip="React Router">
+                </a>
+                <Tooltip id="my-tooltip" />
+                <a 
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="React Router"
+                  data-tooltip-delay-show={100}
+                >
                   <SkillsLogo src={ReactRouter} />
-                </Tool>
-                <Tool data-tip="Tailwind">
+                </a>
+                <Tooltip id="my-tooltip" />
+                <a 
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="Tailwind"
+                  data-tooltip-delay-show={100}
+                >
                   <SkillsLogo src={Tailwind} />
-                </Tool>
-                <Tool data-tip="ChakraUI">
+                </a>
+                <Tooltip id="my-tooltip" />
+                <a 
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="Chakra UI"
+                  data-tooltip-delay-show={100}
+                >
                   <SkillsLogo src={Chakra} />
-                </Tool>
-                <Tool data-tip="Styled Components">
+                </a>
+                <Tooltip id="my-tooltip" />
+                <a 
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="Styled Components"
+                  data-tooltip-delay-show={100}
+                >
                   <SkillsLogo src={Styled} />
-                </Tool>
+                </a>
+                <Tooltip id="my-tooltip" />
               </SkillsCont>
             </AboutItem>
           </AboutItems>
