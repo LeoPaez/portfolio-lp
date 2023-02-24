@@ -8,6 +8,7 @@ import Chakra from "../assets/langs/chakra-ui.png"
 import Styled from "../assets/langs/styled.png"
 import ReactRouter from "../assets/langs/react-router.png"
 import Tailwind from "../assets/langs/tailwind.png"
+import Material from "../assets/langs/material-ui.png"
 import { motion } from "framer-motion"
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
@@ -63,15 +64,10 @@ const AboutItem = styled.div`
   margin-top: 20px;
   :last-of-type {
     border: 2px solid #495057;
-    padding: 20px 0 30px 0;
+    padding: 10px 0 10px 0;
     border-radius: 10px;
     background-color: #343a40;
     /* margin-top: 10px; */
-  }
-  @media (max-width: 1100px){
-    :last-of-type {
-      padding: 40px 0 50px 0;
-    }
   }
   @media (max-width: 900px){
     width: 100%;
@@ -145,7 +141,7 @@ const ExpInfo = styled.p`
 `
 const SkillsTitle = styled.h4`
   font-size: 22px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #ced4da;
   border-bottom: 1px solid #495057;
   padding: 0 20px 4px 20px;
@@ -157,47 +153,39 @@ const SkillsCont = styled.div`
   flex-wrap: wrap;
   width: 260px;
   gap: 20px;
-  span:nth-child(7) img {
-    border-radius: 50%;
-  }
   @media (max-width: 1100px){
     width: 220px;
   }
   @media (max-width: 900px){
-    width: 100%;
+    width: 320px;
     gap: 24px;
   }
   @media (max-width: 700px){
+    width: 300px;
     gap: 16px;
   }
   @media (max-width: 600px){
-    width: 230px;
+    /* width: 230px; */
     gap: 20px;
+  }
+  @media (max-width: 400px){
+    width: 240px;
   }
 `
 const SkillsLogo = styled.img`
-  min-width: 50px;
-  max-width: 50px;
-  max-height: 50px;
-  @media (max-width: 1100px){
-    min-width: 40px;
-    max-width: 40px;
-    max-height: 40px;
-  }
+  min-width: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: ${props => props.borderRadius};
   @media (max-width: 900px){
     min-width: 44px;
     max-width: 44px;
     max-height: 44px;
   }
   @media (max-width: 700px){
-    min-width: 38px;
-    max-width: 38px;
-    max-height: 38px;
-  }
-  @media (max-width: 600px){
-    min-width: 42px;
-    max-width: 42px;
-    max-height: 42px;
+    min-width: 40px;
+    max-width: 40px;
+    max-height: 40px;
   }
 `
 
@@ -278,7 +266,7 @@ const About = () => {
                   data-tooltip-content="Chakra UI"
                   data-tooltip-delay-show={100}
                 >
-                  <SkillsLogo src={Chakra} />
+                  <SkillsLogo src={Chakra} borderRadius="50%"/>
                 </a>
                 <Tooltip id="my-tooltip" />
                 <a 
@@ -287,6 +275,13 @@ const About = () => {
                   data-tooltip-delay-show={100}
                 >
                   <SkillsLogo src={Styled} />
+                </a>
+                <a 
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="Material UI"
+                  data-tooltip-delay-show={100}
+                >
+                  <SkillsLogo src={Material} />
                 </a>
                 <Tooltip id="my-tooltip" />
               </SkillsCont>
