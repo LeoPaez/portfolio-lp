@@ -6,6 +6,7 @@ import CSS from "../assets/langs/css-basic.png"
 import JS from "../assets/langs/js-basic.png"
 import ReactIcon from "../assets/langs/react-basic.png"
 import Tailwind from "../assets/langs/tailwind-basic.png"
+import Material from "../assets/langs/material-ui-basic.png"
 // icons
 import GitHub from "../assets/social/github.png"
 import ArrowRight from "../assets/icons/arrow-right.png"
@@ -13,7 +14,7 @@ import ArrowRight from "../assets/icons/arrow-right.png"
 import Oasis from "../assets/projects/hotel-oasis.png"
 import HighTech from "../assets/projects/high-tech.png"
 import Zappi from "../assets/projects/zappi.png"
-import BlogDeCafe from "../assets/projects/blogdecafe.png"
+import CrudApp from "../assets/projects/crud-app.png"
 
 const Flex = styled.div`
   display: flex;
@@ -271,6 +272,36 @@ const Projects = () => {
               </ContentDetails>
             </Project>
             <Project>
+              <ProjectImg src={CrudApp} />
+              <ContentDetails>
+                <ProjectName>Crud App</ProjectName>
+                <ProjectInfo>
+                  Esta App es un Crud donde se puede añadir usuarios, editarlos, fitrarlos y eliminarlos 
+                </ProjectInfo>
+                <ProjectLangs>
+                  <ProjectLang src={HTML} />
+                  <ProjectLang src={CSS} />
+                  <ProjectLang src={JS} />
+                  <ProjectLang src={ReactIcon} />
+                  <ProjectLang src={Material} />
+                </ProjectLangs>
+                <ProjectLinks>
+                  <a href="https://github.com/LeoPaez/crud-app-react" target="_blank">
+                    <GHBtn>
+                      <GHBtnIcon src={GitHub} />
+                      GitHub
+                    </GHBtn>
+                  </a>
+                  <a href="https://crud-app-react1.vercel.app/" target="_blank">
+                    <DemoBtn>
+                      Demo
+                      <DemoBtnIcon src={ArrowRight} />
+                    </DemoBtn>
+                  </a>
+                </ProjectLinks>
+              </ContentDetails>
+            </Project>
+            <Project>
               <ProjectImg src={Zappi} />
               <ContentDetails>
                 <ProjectName>Zappi</ProjectName>
@@ -295,35 +326,6 @@ const Projects = () => {
                         Demo
                         <DemoBtnIcon src={ArrowRight} />
                       </DemoBtn>
-                  </a>
-                </ProjectLinks>
-              </ContentDetails>
-            </Project>
-            <Project>
-              <ProjectImg src={BlogDeCafe} />
-              <ContentDetails>
-                <ProjectName>Blog de Café</ProjectName>
-                <ProjectInfo>
-                  Blog de Café es un sitio donde puedas aprender diversas técnicas para preparar café con cursos y talleres
-                </ProjectInfo>
-                <ProjectLangs>
-                  <ProjectLang src={HTML} />
-                  <ProjectLang src={CSS} />
-                  {/* <ProjectLang src={JS} /> */}
-                  {/* <ProjectLang src={ReactIcon} /> */}
-                </ProjectLangs>
-                <ProjectLinks>
-                  <a href="https://github.com/LeoPaez/blogdecafe" target="_blank">
-                    <GHBtn>
-                      <GHBtnIcon src={GitHub} />
-                      GitHub
-                    </GHBtn>
-                  </a>
-                  <a href="https://blogdecafe.vercel.app/" target="_blank">
-                    <DemoBtn>
-                      Demo
-                      <DemoBtnIcon src={ArrowRight} />
-                    </DemoBtn>
                   </a>
                 </ProjectLinks>
               </ContentDetails>
