@@ -20,6 +20,7 @@ const ContactMsg = styled.textarea`
   background-color: #495057;
   color: #ced4da;
   border: 2px solid #343a40;
+  transition: all 0.3s ease 0s;
   @media (max-width: 900px){
     padding-right: 120px;
   }
@@ -31,6 +32,7 @@ const ContactMsg = styled.textarea`
   }
   :focus {
     outline: none;
+    border: 2px solid #ff9900;
   }
   ::placeholder {
     color: #ced4da;
