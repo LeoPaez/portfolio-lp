@@ -220,7 +220,6 @@ const About = () => {
                 >
                   <SkillsLogo src={HTML} />
                 </a>
-                <Tooltip id="my-tooltip" />
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="CSS"
@@ -228,7 +227,6 @@ const About = () => {
                 >
                   <SkillsLogo src={CSS} />
                 </a>
-                <Tooltip id="my-tooltip" />
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="JavaScript"
@@ -236,7 +234,6 @@ const About = () => {
                 >
                   <SkillsLogo src={JS} />
                 </a>
-                <Tooltip id="my-tooltip" />
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="React"
@@ -244,7 +241,6 @@ const About = () => {
                 >
                   <SkillsLogo src={ReactIcon} />
                 </a>
-                <Tooltip id="my-tooltip" />
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="React Router"
@@ -252,7 +248,6 @@ const About = () => {
                 >
                   <SkillsLogo src={ReactRouter} />
                 </a>
-                <Tooltip id="my-tooltip" />
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="Tailwind"
@@ -260,21 +255,19 @@ const About = () => {
                 >
                   <SkillsLogo src={Tailwind} />
                 </a>
-                <Tooltip id="my-tooltip" />
-                <a 
-                  data-tooltip-id="my-tooltip"
-                  data-tooltip-content="Chakra UI"
-                  data-tooltip-delay-show={100}
-                >
-                  <SkillsLogo src={Chakra} borderRadius="50%"/>
-                </a>
-                <Tooltip id="my-tooltip" />
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="Styled Components"
                   data-tooltip-delay-show={100}
                 >
                   <SkillsLogo src={Styled} />
+                </a>
+                <a 
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="Chakra UI"
+                  data-tooltip-delay-show={100}
+                >
+                  <SkillsLogo src={Chakra} borderRadius="50%"/>
                 </a>
                 <a 
                   data-tooltip-id="my-tooltip"
