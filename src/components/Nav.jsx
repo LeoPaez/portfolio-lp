@@ -5,6 +5,8 @@ import Linkedin from "../assets/social/linkedin.png"
 import GitHub from "../assets/social/github.png"
 import Wpp from "../assets/social/wpp.png"
 import Burger from './MenuBurger/Burger'
+// import ToggleLang from "./Inputs/ToggleLang"
+// import { useTranslation } from "react-i18next"
 
 const Flex = styled.div`
   display: flex;
@@ -98,6 +100,15 @@ const SocialLogo = styled.img`
 
 
 const Nav = () => {
+  // const [t, i18n] = useTranslation("global")
+  // const handleChange = (e) => {
+  //   if(e.target.checked) {
+  //     i18n.changeLanguage("en")
+  //   } else {
+  //     i18n.changeLanguage("es")
+  //   }
+  // }
+
   return (
     <>
       <Flex>

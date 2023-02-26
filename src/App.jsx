@@ -9,12 +9,14 @@ import Projects from './components/Projects'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import { ScrollAnim } from "./components/AnimatedCont"
+import ChangeLang from "./components/ChangeLang"
 
-const Cont = styled(motion.div)`
+const Back = styled(motion.div)`
   background-color: ${props => props.backColor};
 `
 
 function App() {
+
   return (
     <div className="App">
       <ScrollAnim zIndex="100" duration="0.6">
@@ -23,22 +25,23 @@ function App() {
       <ScrollAnim duration="0.7">
         <Hero />
       </ScrollAnim>
-      <Cont backColor="#212529">
+      <Back backColor="#212529">
         <ScrollAnim duration="0.8">
           <About />
         </ScrollAnim>
-      </Cont>
+      </Back>
       <ScrollAnim duration="0.6">
         <Projects />
       </ScrollAnim>
       <ScrollAnim duration="0.6">
         <Contact />
       </ScrollAnim>
-      <Cont backColor="#212529">
+      <Back backColor="#212529">
         <ScrollAnim duration="0.6">
           <Footer />
         </ScrollAnim>
-      </Cont>
+      </Back>
+      <ChangeLang />
     </div>
   )
 }
