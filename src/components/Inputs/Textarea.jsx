@@ -37,10 +37,10 @@ const ContactMsg = styled.textarea`
   ::placeholder {
     color: #ced4da;
   }
-  ${props => props.valido === 'true' && css`
+  ${props => props.valid === 'true' && css`
     border: 2px solid #4BB543;
 	`}
-	${props => props.valido === 'false' && css`
+	${props => props.valid === 'false' && css`
     border: 2px solid #cc0000;
 	`}
 `
@@ -55,24 +55,24 @@ const Error = styled.p`
   color: #ff0033;
     visibility: hidden;
 
-  ${props => props.valido === 'true' && css`
+  ${props => props.valid === 'true' && css`
     visibility: hidden;
 	`}
-	${props => props.valido === 'false' && css`
+	${props => props.valid === 'false' && css`
 		visibility: visible;
 	`}
 `
 
-const Textarea = ({estado, cambiarEstado, tipo, placeholder, name, leyendaError, expresionRegular}) => {
+const Textarea = ({state, changeState, type, placeholder, name, errorText, regex}) => {
   const onChange = (e) => {
-    cambiarEstado({...estado, campo: e.target.value})
+    changeState({...state, field: e.target.value})
   }
-  const validacion = () => {
-    if(expresionRegular) {
-      if(expresionRegular.test(estado.campo)) {
-        cambiarEstado({...estado, valido: "true"})
+  const validation = () => {
+    if(regex) {
+      if(regex.test(state.field)) {
+        changeState({...state, valid: "true"})
       } else {
-        cambiarEstado({...estado, valido: "false"})
+        changeState({...state, valid: "false"})
       }
     }
   }
@@ -81,17 +81,17 @@ const Textarea = ({estado, cambiarEstado, tipo, placeholder, name, leyendaError,
     <>
       <ContactInputCont>
         <ContactMsg
-          type={tipo}
+          type={type}
           placeholder={placeholder}
           id={name}
-          value={estado.campo}
+          value={state.field}
           onChange={onChange}
-          onKeyUp={validacion}
-          onBlur={validacion}
-          valido={estado.valido}
+          onKeyUp={validation}
+          onBlur={validation}
+          valid={state.valid}
         />
         <MsgError>
-          <Error valido={estado.valido}>{leyendaError}</Error>
+          <Error valid={state.valid}>{errorText}</Error>
         </MsgError>
       </ContactInputCont>
     </>

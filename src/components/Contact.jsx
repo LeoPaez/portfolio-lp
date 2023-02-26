@@ -115,27 +115,27 @@ const ContactSubmit = styled.button`
 `
 
 const Contact = () => {
-  const [inputName, changeInputName] = useState({campo: '', valido: null});
-  const [inputEmail, changeInputEmail] = useState({campo: '', valido: null});
-  const [inputSubject, changeInputSubject] = useState({campo: '', valido: null});
-  const [inputMsg, changeInputMsg] = useState({campo: '', valido: null});
-	const expresiones = {
-		nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+  const [inputName, changeInputName] = useState({field: '', valid: null});
+  const [inputEmail, changeInputEmail] = useState({field: '', valid: null});
+  const [inputSubject, changeInputSubject] = useState({field: '', valid: null});
+  const [inputMsg, changeInputMsg] = useState({field: '', valid: null});
+	const expressions = {
+		nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
 		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     allCharacters: /^[A-Za-z0-9\s!@#$%^&*()_+=-`~\\\]\[{}|';:/.,?><]{1,16}$/,
 	}
   
   const onSubmit = (e) => {
 		if (
-      inputName.valido === "true" &&
-      inputEmail.valido === "true" &&
-      inputSubject.valido === "true" &&
+      inputName.valid === "true" &&
+      inputEmail.valid === "true" &&
+      inputSubject.valid === "true" &&
       inputMsg
     ){
-			changeInputName({campo: '', valido: ''});
-			changeInputEmail({campo: '', valido: ''});
-			changeInputSubject({campo: '', valido: ''});
-			changeInputMsg({campo: '', valido: ''});
+			changeInputName({field: '', valid: ''});
+			changeInputEmail({field: '', valid: ''});
+			changeInputSubject({field: '', valid: ''});
+			changeInputMsg({field: '', valid: ''});
 		} else {
       e.preventDefault();
       Swal.fire({
@@ -173,41 +173,42 @@ const Contact = () => {
           <ContactItem>
             <ContactForm action="https://formsubmit.co/lpaezbusiness@gmail.com" method="POST" onSubmit={onSubmit}>
               <Input
-                estado={inputName}
-                cambiarEstado={changeInputName}
-                tipo="text"
+                state={inputName}
+                changeState={changeInputName}
+                type="text"
                 placeholder="Nombre"
                 name="name"
-                leyendaError="Por favor ingresa solo letras"
-                expresionRegular={expresiones.nombre}
+                errorText="Por favor ingresa solo letras"
+                regex={expressions.nombre}
               />
               <Input 
-                estado={inputEmail}
-                cambiarEstado={changeInputEmail}
-                tipo="email"
+                state={inputEmail}
+                changeState={changeInputEmail}
+                type="email"
                 placeholder="Email"
                 name="email"
-                leyendaError="Por favor ingresa un email valido"
-                expresionRegular={expresiones.correo}
+                errorText="Por favor ingresa un email valido"
+                regex={expressions.correo}
               />
               <Input 
-                estado={inputSubject}
-                cambiarEstado={changeInputSubject}
-                tipo="text"
+                state={inputSubject}
+                changeState={changeInputSubject}
+                type="text"
                 placeholder="Asunto"
                 name="subject"
-                leyendaError="Por favor ingresa un asunto"
-                expresionRegular={expresiones.allCharacters}
+                errorText="Por favor ingresa un asunto"
+                regex={expressions.allCharacters}
               />
               <Textarea
-                estado={inputMsg}
-                cambiarEstado={changeInputMsg}
-                tipo="text"
+                state={inputMsg}
+                changeState={changeInputMsg}
+                type="text"
                 placeholder="Mensaje"
                 name="mensaje"
-                leyendaError="Por favor ingresa un mensaje"
-                expresionRegular={expresiones.allCharacters}
+                errorText="Por favor ingresa un mensaje"
+                regex={expressions.allCharacters}
               />
+              <input type="hidden" name="_captcha" value="false"></input>
               <ContactSubmit type="submit">Enviar</ContactSubmit>
             </ContactForm>
           </ContactItem>
