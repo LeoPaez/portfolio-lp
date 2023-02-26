@@ -202,7 +202,7 @@ const About = () => {
               <ExpCont>
                 <Exp>
                   <ExpNum>+1</ExpNum>
-                  <ExpInfo>Años de experiencia</ExpInfo>
+                  <ExpInfo>Años programando</ExpInfo>
                 </Exp>
                 <Exp>
                   <ExpNum>+30</ExpNum>
