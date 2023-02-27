@@ -12,7 +12,6 @@ html {
 body {
   background-color: #343a40;
   color: #FFF;
-  transition: all 0.3s ease 0s;
   overflow-x: inherit;
 }
 

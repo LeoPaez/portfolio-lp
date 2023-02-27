@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import React, { useLayoutEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from "react-intersection-observer"
 import styled from 'styled-components'
@@ -13,11 +13,10 @@ const boxVariant = {
 };
 
 export const ScrollAnim = ({ children, zIndex, duration }) => {
-
   const control = useAnimation();
   const [ref, inView] = useInView();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (inView) {
       control.start("visible");
     }

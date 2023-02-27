@@ -9,7 +9,6 @@ import Styled from "../assets/langs/styled.png"
 import ReactRouter from "../assets/langs/react-router.png"
 import Tailwind from "../assets/langs/tailwind.png"
 import Material from "../assets/langs/material-ui.png"
-import { motion } from "framer-motion"
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 import { useTranslation } from "react-i18next"
@@ -20,7 +19,7 @@ const Flex = styled.div`
   align-items: center;
   background-color: #212529;
 `
-const AboutCont = styled(motion.div)`
+const AboutCont = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
