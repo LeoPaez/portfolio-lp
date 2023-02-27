@@ -8,7 +8,7 @@ import Nav from './components/Nav'
 import Projects from './components/Projects'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
-import { ScrollAnim } from "./components/AnimatedCont"
+import { Anim, ScrollAnim } from "./components/AnimatedCont"
 import ChangeLang from "./components/ChangeLang"
 
 const Back = styled(motion.div)`
@@ -19,16 +19,16 @@ function App() {
 
   return (
     <div className="App">
-      <ScrollAnim zIndex="100" duration="0.6">
+      <Anim zIndex="100" duration="0.6">
         <Nav />
-      </ScrollAnim>
-      <ScrollAnim duration="0.7">
+      </Anim>
+      <Anim duration="0.7">
         <Hero />
-      </ScrollAnim>
+      </Anim>
       <Back backColor="#212529">
-        <ScrollAnim duration="0.8">
+        <Anim duration="0.8">
           <About />
-        </ScrollAnim>
+        </Anim>
       </Back>
       <ScrollAnim duration="0.6">
         <Projects />

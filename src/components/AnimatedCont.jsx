@@ -12,7 +12,23 @@ const boxVariant = {
   hidden: { opacity: 0, scale: 0.8 }
 };
 
-export const ScrollAnim = ({ children, zIndex, duration }) => {
+export const Anim = ({ children, zIndex, duration }) => {
+  return (
+    <>
+      <Cont
+        variants={boxVariant}
+        zIndex={zIndex}
+        custom={{ duration: duration }}
+        initial="hidden"
+        animate="visible"
+      >
+        { children }
+      </Cont>
+    </>
+  )
+}
+
+export const ScrollAnim = ({ children, duration }) => {
   const control = useAnimation();
   const [ref, inView] = useInView();
 
@@ -20,7 +36,7 @@ export const ScrollAnim = ({ children, zIndex, duration }) => {
     if (inView) {
       control.start("visible");
     }
-  }, [control, inView]);
+  }, [inView]);
 
   return (
     <>
@@ -29,7 +45,6 @@ export const ScrollAnim = ({ children, zIndex, duration }) => {
         variants={boxVariant}
         initial="hidden"
         animate={control}
-        zIndex={zIndex}
         custom={{ duration: duration }}
       >
         { children }
