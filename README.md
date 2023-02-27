@@ -7,3 +7,4 @@ Librerias y herramientas usadas:
 - Framer Motion
 - SweetAlert 2
 - ReactTooltip
+- i18next
