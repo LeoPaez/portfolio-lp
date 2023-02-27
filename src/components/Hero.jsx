@@ -1,6 +1,8 @@
 import React from 'react'
+import { useTranslation } from "react-i18next"
 import styled, { keyframes } from 'styled-components'
 import HeroDraw from "../assets/draw-header.svg"
+import ArrowRight from "../assets/icons/arrow-right.png"
 
 const showup = keyframes`
   0% {opacity:0;}
@@ -117,9 +119,9 @@ const HeroTitleCont = styled.div`
   display: flex;
   gap: 8px;
   overflow: hidden;
-  -webkit-backface-visibility: hidden;
+  /* -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0); */
 `
 const HeroTitleSpan = styled.span`
   color: #f8f9fa;
@@ -208,6 +210,10 @@ const HeroButton = styled.button`
   }
 `
 const HeroButtonCV = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
   border: none;
   border-radius: 4px;
   padding: 10px 0;
@@ -227,10 +233,14 @@ const HeroButtonCV = styled.button`
   @media (max-width: 500px){
     width: 120px;
   }
-  @media (max-width: px){}
+`
+const HeroButtonCVIcon = styled.img`
+  width: 15px;
 `
 
 const Hero = () => {
+  const [t] = useTranslation("global")
+
   return (
     <>
       <Flex>
@@ -238,7 +248,7 @@ const Hero = () => {
           <HeroItem>
             <HeroTitleCont>
               <HeroTitle>
-                Hola, soy
+                {t("header.title")}
               </HeroTitle>
               <HeroTitle>
                 <HeroTitleSpan> Leonel Paez</HeroTitleSpan>
@@ -246,14 +256,17 @@ const Hero = () => {
             </HeroTitleCont>
             <HeroSubTitle>Front End Developer</HeroSubTitle>
             <HeroInfo>
-              Soy un desarrollador Front End situado en Buenos Aires, Argentina. Me describo a mi mismo como una persona creativa y apasionada que no para de aprender. Disfruto de crear proyectos innovadores y eficientes día a día con un toque original de diseño.
+              {t("header.info")}
             </HeroInfo>
             <HeroButtons>
               <a href="#contact">
-                <HeroButton>Contrátame</HeroButton>
+                <HeroButton>{t("header.hireMeButton")}</HeroButton>
               </a>
               <a href="https://drive.google.com/file/d/1kPyJGFlNaq3_wnxgKyHrE4xSAZ40KFlv/view?usp=sharing" target="_blank">
-                <HeroButtonCV>Mi CV</HeroButtonCV>
+                <HeroButtonCV>
+                  CV
+                  <HeroButtonCVIcon src={ArrowRight} />
+                </HeroButtonCV>
               </a>
             </HeroButtons>
           </HeroItem>

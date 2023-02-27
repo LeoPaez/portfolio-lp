@@ -4,6 +4,7 @@ import WhiteLogo from "../assets/lp-logo-white-png.png"
 import Linkedin from "../assets/social/linkedin.png"
 import GitHub from "../assets/social/github.png"
 import Wpp from "../assets/social/wpp.png"
+import { useTranslation } from "react-i18next"
 
 const Cont = styled.div`
   display: flex;
@@ -48,6 +49,8 @@ const SocialLogo = styled.img`
 `
 
 const Footer = () => {
+  const [t] = useTranslation("global")
+
   return (
     <>
       <Cont>
@@ -56,7 +59,7 @@ const Footer = () => {
             <FooterLogo src={WhiteLogo} />
           </a>
           <Border />
-          <FooterRights>©2023 Todos los derechos reservados</FooterRights>
+          <FooterRights>©2023 {t("footer.rights")}</FooterRights>
         </FooterCont>
         <FooterCont>
           <Social href="https://www.linkedin.com/in/leonel-paez/" target="_blank">

@@ -15,6 +15,7 @@ import Oasis from "../assets/projects/hotel-oasis.png"
 import HighTech from "../assets/projects/high-tech.png"
 import Zappi from "../assets/projects/zappi.png"
 import CrudApp from "../assets/projects/crud-app.png"
+import { useTranslation } from "react-i18next"
 
 const Flex = styled.div`
   display: flex;
@@ -69,6 +70,9 @@ const ContentDetails = styled.div`
   @media (max-width: 900px){
     gap: 20px;
   }
+  @media (max-width: 500px){
+    gap: 16px;
+  }
 `
 const ProjectsTitle = styled.h2`
   font-size: 26px;
@@ -105,7 +109,7 @@ const ProjectImg = styled.img`
 const ProjectName = styled.p`
   font-size: 20px;
   @media (max-width: 500px){
-    font-size: 22px;
+    font-size: 18px;
   }
 `
 const ProjectInfo = styled.p`
@@ -148,7 +152,6 @@ const ProjectLinks = styled.div`
 `
 const DemoBtn = styled.button`
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 6px;
   color: #e9ecef;
@@ -164,9 +167,11 @@ const DemoBtn = styled.button`
   }
 `
 const DemoBtnIcon = styled.img`
-  width: 16px;
+  width: 14px;
 `
 const GHBtn = styled.button`
+  display: flex;
+  align-items: center;
   background-color: transparent;
   color: #e9ecef;
   display: flex;
@@ -186,6 +191,10 @@ const GHBtnIcon = styled.img`
   width: 18px;
 `
 const MoreProjectsBtn = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   margin-top: 30px;
   padding: 10px 60px;
   font-size: 15px;
@@ -203,21 +212,25 @@ const MoreProjectsBtn = styled.button`
     border: 2px solid #FFA600;
   }
 `
-
+const MoreProjectsBtnIcon = styled.img`
+  width: 16px;
+`
 
 const Projects = () => {
+  const [t] = useTranslation("global")
+
   return (
     <>
       <Flex>
         <Cont id="projects">
-          <ProjectsTitle>Proyectos</ProjectsTitle>
+          <ProjectsTitle>{t("projects.title")}</ProjectsTitle>
           <ProjectsCont>
           <Project>
               <ProjectImg src={Oasis} />
               <ContentDetails>
                 <ProjectName>Hotel Oasis</ProjectName>
                 <ProjectInfo>
-                  Hotel Oasis es una página donde puedes alquilar habitaciones de lujo y filtrarlas segun tus necesidades
+                  {t("projects.project1")}
                 </ProjectInfo>
                 <ProjectLangs>
                   <ProjectLang src={JS} />
@@ -245,13 +258,12 @@ const Projects = () => {
               <ContentDetails>
                 <ProjectName>HighTech</ProjectName>
                 <ProjectInfo>
-                  Tienda de Hardware donde puedes conseguir todo tipo de componentes para tu computadora
+                  {t("projects.project2")}
                 </ProjectInfo>
                 <ProjectLangs>
                   <ProjectLang src={HTML} />
                   <ProjectLang src={CSS} />
                   <ProjectLang src={JS} />
-                  {/* <ProjectLang src={ReactIcon} /> */}
                 </ProjectLangs>
                 <ProjectLinks>
                   <a href="https://github.com/LeoPaez/high-tech" target="_blank">
@@ -274,7 +286,7 @@ const Projects = () => {
               <ContentDetails>
                 <ProjectName>Crud App</ProjectName>
                 <ProjectInfo>
-                  Esta App es un Crud donde se puede añadir usuarios, editarlos, fitrarlos y eliminarlos 
+                  {t("projects.project3")}
                 </ProjectInfo>
                 <ProjectLangs>
                   <ProjectLang src={JS} />
@@ -302,7 +314,7 @@ const Projects = () => {
               <ContentDetails>
                 <ProjectName>Zappi</ProjectName>
                 <ProjectInfo>
-                  Ecommerce de comida donde puedes comprar diversos tipos de comida según tus gustos
+                  {t("projects.project4")}
                 </ProjectInfo>
                 <ProjectLangs>
                   <ProjectLang src={HTML} />
@@ -328,7 +340,10 @@ const Projects = () => {
             </Project>
           </ProjectsCont>
           <a href="https://github.com/LeoPaez" target="_blank">
-            <MoreProjectsBtn>Ver más</MoreProjectsBtn>
+            <MoreProjectsBtn>
+              {t("projects.viewMoreButton")}
+              <MoreProjectsBtnIcon src={ArrowRight} />
+            </MoreProjectsBtn>
           </a>
         </Cont>
       </Flex>

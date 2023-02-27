@@ -12,6 +12,7 @@ import Material from "../assets/langs/material-ui.png"
 import { motion } from "framer-motion"
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
+import { useTranslation } from "react-i18next"
 
 const Flex = styled.div`
   display: flex;
@@ -67,7 +68,6 @@ const AboutItem = styled.div`
     padding: 10px 0 10px 0;
     border-radius: 10px;
     background-color: #343a40;
-    /* margin-top: 10px; */
   }
   @media (max-width: 900px){
     width: 100%;
@@ -88,7 +88,6 @@ const AboutTitle = styled.h3`
 const AboutInfo = styled.p`
   font-size: 17px;
   display: flex;
-  /* margin: 20px 0; */
   margin-bottom: 20px;
   color: #DEE2E6;
   line-height: 22px;
@@ -165,7 +164,6 @@ const SkillsCont = styled.div`
     gap: 16px;
   }
   @media (max-width: 600px){
-    /* width: 230px; */
     gap: 20px;
   }
   @media (max-width: 400px){
@@ -190,23 +188,24 @@ const SkillsLogo = styled.img`
 `
 
 const About = () => {
+  const [t] = useTranslation("global")
+
   return (
     <>
       <Flex>
         <AboutCont id="about">
-          <AboutTitle>Sobre Mi</AboutTitle>
+          <AboutTitle>{t("about.title")}</AboutTitle>
           <AboutItems>
             <AboutItem>
-              <AboutInfo>
-                Mi visión es poder crear sitios web con un buen criterio, que sean adaptables, dinámicos, accesibles y con un toque propio de diseño para darle mi marca personal y sin dejar de lado la eficiencia para una buena experiencia del usuario. Me gusta estar al tanto de las nuevas tecnologías que el mercado requiera y experimentar por mi cuenta nuevos desafíos.</AboutInfo>
+              <AboutInfo>{t("about.info")}</AboutInfo>
               <ExpCont>
                 <Exp>
                   <ExpNum>+1</ExpNum>
-                  <ExpInfo>Años programando</ExpInfo>
+                  <ExpInfo>{t("about.years")}</ExpInfo>
                 </Exp>
                 <Exp>
                   <ExpNum>+30</ExpNum>
-                  <ExpInfo>Proyectos completados</ExpInfo>
+                  <ExpInfo>{t("about.projects")}</ExpInfo>
                 </Exp>
               </ExpCont>
             </AboutItem>

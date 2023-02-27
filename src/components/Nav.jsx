@@ -5,8 +5,7 @@ import Linkedin from "../assets/social/linkedin.png"
 import GitHub from "../assets/social/github.png"
 import Wpp from "../assets/social/wpp.png"
 import Burger from './MenuBurger/Burger'
-// import ToggleLang from "./Inputs/ToggleLang"
-// import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next"
 
 const Flex = styled.div`
   display: flex;
@@ -100,14 +99,7 @@ const SocialLogo = styled.img`
 
 
 const Nav = () => {
-  // const [t, i18n] = useTranslation("global")
-  // const handleChange = (e) => {
-  //   if(e.target.checked) {
-  //     i18n.changeLanguage("en")
-  //   } else {
-  //     i18n.changeLanguage("es")
-  //   }
-  // }
+  const [t] = useTranslation("global")
 
   return (
     <>
@@ -119,10 +111,10 @@ const Nav = () => {
               <Logo src={WhiteLogo} />
             </Link>
             <LinkNavCont>
-              <LinkNav href='#nav'>Inicio</LinkNav>
-              <LinkNav href='#about'>Sobre Mi</LinkNav>
+              <LinkNav href='#nav'>{t("nav.home")}</LinkNav>
+              <LinkNav href='#about'>{t("nav.about")}</LinkNav>
               <LinkNav href='#projects'>Portfolio</LinkNav>
-              <LinkNav href='#contact'>Contacto</LinkNav>
+              <LinkNav href='#contact'>{t("nav.contact")}</LinkNav>
             </LinkNavCont>
           </NavCont>
           <NavCont>

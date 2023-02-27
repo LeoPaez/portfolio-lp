@@ -6,6 +6,7 @@ import Email from "../assets/icons/email.png"
 import Swal from "sweetalert2"
 import Input from './Inputs/Input'
 import Textarea from './Inputs/Textarea'
+import { useTranslation } from "react-i18next"
 
 const Flex = styled.div`
   display: flex;
@@ -115,6 +116,8 @@ const ContactSubmit = styled.button`
 `
 
 const Contact = () => {
+  const [t] = useTranslation("global")
+
   const [inputName, changeInputName] = useState({field: '', valid: null});
   const [inputEmail, changeInputEmail] = useState({field: '', valid: null});
   const [inputSubject, changeInputSubject] = useState({field: '', valid: null});
@@ -122,25 +125,26 @@ const Contact = () => {
 	const expressions = {
 		nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
 		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    allCharacters: /^[A-Za-z0-9\s!@#$%^&*()_+=-`~\\\]\[{}|';:/.,?><]{1,16}$/,
+    allCharacters: /^[A-Za-z0-9\s!@#$%^&*()_+=-`~\\\]\[{}|';:/.,?><]/,
 	}
   
   const onSubmit = (e) => {
+    const inputValue = e.target.value
 		if (
       inputName.valid === "true" &&
       inputEmail.valid === "true" &&
       inputSubject.valid === "true" &&
       inputMsg
     ){
-			changeInputName({field: '', valid: ''});
-			changeInputEmail({field: '', valid: ''});
-			changeInputSubject({field: '', valid: ''});
-			changeInputMsg({field: '', valid: ''});
+			changeInputName({field: inputValue, valid: ''});
+			changeInputEmail({field: inputValue, valid: ''});
+			changeInputSubject({field: inputValue, valid: ''});
+			changeInputMsg({field: inputValue, valid: ''});
 		} else {
       e.preventDefault();
       Swal.fire({
-        title: "Espera...",
-        html: "<b>No completaste todos los campos del formulario</b>",
+        title: `${t("formAlert.title")}`,
+        html: `<b>${t("formAlert.msg")}</b>`,
         icon: "error",
         confirmButtonColor: "#4BB543",
         scrollbarPadding: false,
@@ -155,7 +159,7 @@ const Contact = () => {
       <Flex>
         <ContactCont id="contact">
           <ContactItem>
-            <ContactTitle>Contactame</ContactTitle>
+            <ContactTitle>{t("contact.title")}</ContactTitle>
             <ContactInfo>
               <ContactIconBg>
                 <ContactIcon src={Location} />
@@ -176,40 +180,40 @@ const Contact = () => {
                 state={inputName}
                 changeState={changeInputName}
                 type="text"
-                placeholder="Nombre"
-                name="name"
+                placeholder={t("contact.name")}
                 errorText="Por favor ingresa solo letras"
                 regex={expressions.nombre}
+                name="nombre"
               />
               <Input 
                 state={inputEmail}
                 changeState={changeInputEmail}
                 type="email"
                 placeholder="Email"
-                name="email"
                 errorText="Por favor ingresa un email valido"
                 regex={expressions.correo}
+                name="email"
               />
               <Input 
                 state={inputSubject}
                 changeState={changeInputSubject}
                 type="text"
-                placeholder="Asunto"
-                name="subject"
+                placeholder={t("contact.subject")}
                 errorText="Por favor ingresa un asunto"
                 regex={expressions.allCharacters}
+                name="asunto"
               />
               <Textarea
                 state={inputMsg}
                 changeState={changeInputMsg}
                 type="text"
-                placeholder="Mensaje"
-                name="mensaje"
+                placeholder={t("contact.msg")}
                 errorText="Por favor ingresa un mensaje"
                 regex={expressions.allCharacters}
+                name="mensaje"
               />
               <input type="hidden" name="_captcha" value="false"></input>
-              <ContactSubmit type="submit">Enviar</ContactSubmit>
+              <ContactSubmit type="submit">{t("contact.submitButton")}</ContactSubmit>
             </ContactForm>
           </ContactItem>
         </ContactCont>
