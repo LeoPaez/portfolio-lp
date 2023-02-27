@@ -60,7 +60,7 @@ const Error = styled.p`
 	`}
 `
 
-const Input = ({state, changeState, type, placeholder, name, errorText, regex}) => {
+const Input = ({state, changeState, type, placeholder, name, errorText, regex }) => {
   const onChange = (e) => {
     changeState({...state, field: e.target.value})
   }
@@ -78,6 +78,7 @@ const Input = ({state, changeState, type, placeholder, name, errorText, regex}) 
     <>
       <ContactInputCont>
         <ContactInput
+          name={name}
           type={type}
           placeholder={placeholder}
           id={name}

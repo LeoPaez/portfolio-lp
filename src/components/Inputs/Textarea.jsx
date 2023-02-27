@@ -63,7 +63,7 @@ const Error = styled.p`
 	`}
 `
 
-const Textarea = ({state, changeState, type, placeholder, name, errorText, regex}) => {
+const Textarea = ({state, changeState, type, placeholder, name, errorText, regex }) => {
   const onChange = (e) => {
     changeState({...state, field: e.target.value})
   }
@@ -81,6 +81,7 @@ const Textarea = ({state, changeState, type, placeholder, name, errorText, regex
     <>
       <ContactInputCont>
         <ContactMsg
+          name={name}
           type={type}
           placeholder={placeholder}
           id={name}
