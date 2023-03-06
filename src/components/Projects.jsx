@@ -13,7 +13,7 @@ import ArrowRight from "../assets/icons/arrow-right.png"
 // projects
 import Oasis from "../assets/projects/hotel-oasis.png"
 import HighTech from "../assets/projects/high-tech.png"
-import Zappi from "../assets/projects/zappi.png"
+import FurniShop from "../assets/projects/furni-shop.png"
 import CrudApp from "../assets/projects/crud-app.png"
 import { useTranslation } from "react-i18next"
 
@@ -310,17 +310,16 @@ const Projects = () => {
               </ContentDetails>
             </Project>
             <Project>
-              <ProjectImg src={Zappi} />
+              <ProjectImg src={FurniShop} />
               <ContentDetails>
-                <ProjectName>Zappi</ProjectName>
+                <ProjectName>FurniShop</ProjectName>
                 <ProjectInfo>
                   {t("projects.project4")}
                 </ProjectInfo>
                 <ProjectLangs>
-                  <ProjectLang src={HTML} />
-                  <ProjectLang src={CSS} />
                   <ProjectLang src={JS} />
-                  {/* <ProjectLang src={ReactIcon} /> */}
+                  <ProjectLang src={ReactIcon} />
+                  <ProjectLang src={Tailwind} />
                 </ProjectLangs>
                 <ProjectLinks>
                   <a href="https://github.com/LeoPaez/E5-Javascript" target="_blank">
