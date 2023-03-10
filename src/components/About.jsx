@@ -216,63 +216,63 @@ const About = () => {
                   data-tooltip-content="HTML"
                   data-tooltip-delay-show={100}
                 >
-                  <SkillsLogo src={HTML} />
+                  <SkillsLogo src={HTML} alt="html" />
                 </a>
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="CSS"
                   data-tooltip-delay-show={100}
                 >
-                  <SkillsLogo src={CSS} />
+                  <SkillsLogo src={CSS} alt="css" />
                 </a>
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="JavaScript"
                   data-tooltip-delay-show={100}
                 >
-                  <SkillsLogo src={JS} />
+                  <SkillsLogo src={JS} alt="javascript" />
                 </a>
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="React"
                   data-tooltip-delay-show={100}
                 >
-                  <SkillsLogo src={ReactIcon} />
+                  <SkillsLogo src={ReactIcon} alt="react" />
                 </a>
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="React Router"
                   data-tooltip-delay-show={100}
                 >
-                  <SkillsLogo src={ReactRouter} />
+                  <SkillsLogo src={ReactRouter} alt="react router" />
                 </a>
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="Tailwind"
                   data-tooltip-delay-show={100}
                 >
-                  <SkillsLogo src={Tailwind} />
+                  <SkillsLogo src={Tailwind} alt="tailwind" />
                 </a>
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="Styled Components"
                   data-tooltip-delay-show={100}
                 >
-                  <SkillsLogo src={Styled} />
+                  <SkillsLogo src={Styled} alt="styled components" />
                 </a>
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="Chakra UI"
                   data-tooltip-delay-show={100}
                 >
-                  <SkillsLogo src={Chakra} borderRadius="50%"/>
+                  <SkillsLogo src={Chakra} borderRadius="50%" alt="chakra ui" />
                 </a>
                 <a 
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content="Material UI"
                   data-tooltip-delay-show={100}
                 >
-                  <SkillsLogo src={Material} />
+                  <SkillsLogo src={Material} alt="material ui" />
                 </a>
                 <Tooltip id="my-tooltip" />
               </SkillsCont>

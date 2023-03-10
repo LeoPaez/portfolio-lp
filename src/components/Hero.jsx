@@ -197,11 +197,6 @@ const HeroButton = styled.button`
   font-size: 15px;
   letter-spacing: 0.5px;
   cursor: pointer;
-  a {
-    :last-of-type button {
-      background-color: pink;
-    }
-  }
   :hover {
     background-color: #FFA600;
   }
@@ -265,14 +260,14 @@ const Hero = () => {
               <a href="https://drive.google.com/file/d/1kPyJGFlNaq3_wnxgKyHrE4xSAZ40KFlv/view?usp=sharing" target="_blank">
                 <HeroButtonCV>
                   CV
-                  <HeroButtonCVIcon src={ArrowRight} />
+                  <HeroButtonCVIcon src={ArrowRight} alt="arrow right" />
                 </HeroButtonCV>
               </a>
             </HeroButtons>
           </HeroItem>
           <HeroItem>
             <HeroBackGround />
-            <HeroImg src={HeroDraw} />
+            <HeroImg src={HeroDraw} alt="hero draw" />
           </HeroItem>
         </HeroCont>
       </Flex>

@@ -11,10 +11,10 @@ import Material from "../assets/langs/material-ui-basic.png"
 import GitHub from "../assets/social/github.png"
 import ArrowRight from "../assets/icons/arrow-right.png"
 // projects
-import Oasis from "../assets/projects/hotel-oasis.png"
-import HighTech from "../assets/projects/high-tech.png"
-import FurniShop from "../assets/projects/furni-shop.png"
-import CrudApp from "../assets/projects/crud-app.png"
+import Oasis from "../assets/projects/hotel-oasis.webp"
+import HighTech from "../assets/projects/high-tech.webp"
+import FurniShop from "../assets/projects/furni-shop.webp"
+import CrudApp from "../assets/projects/crud-app.webp"
 import { useTranslation } from "react-i18next"
 
 const Flex = styled.div`
@@ -226,112 +226,112 @@ const Projects = () => {
           <ProjectsTitle>{t("projects.title")}</ProjectsTitle>
           <ProjectsCont>
           <Project>
-              <ProjectImg src={Oasis} />
+              <ProjectImg src={Oasis} alt="oasis" />
               <ContentDetails>
                 <ProjectName>Hotel Oasis</ProjectName>
                 <ProjectInfo>
                   {t("projects.project1")}
                 </ProjectInfo>
                 <ProjectLangs>
-                  <ProjectLang src={JS} />
-                  <ProjectLang src={ReactIcon} />
-                  <ProjectLang src={Tailwind} />
+                  <ProjectLang src={JS} alt="javascript" />
+                  <ProjectLang src={ReactIcon} alt="react" />
+                  <ProjectLang src={Tailwind} alt="tailwind" />
                 </ProjectLangs>
                 <ProjectLinks>
                   <a href="https://github.com/LeoPaez/frontendpage" target="_blank">
                     <GHBtn>
-                      <GHBtnIcon src={GitHub} />
+                      <GHBtnIcon src={GitHub} alt="github" />
                       GitHub
                     </GHBtn>
                   </a>
                   <a href="https://front-end-store1.vercel.app/" target="_blank">
                     <DemoBtn>
                       Demo
-                      <DemoBtnIcon src={ArrowRight} />
+                      <DemoBtnIcon src={ArrowRight} alt="arrow right" />
                     </DemoBtn>
                   </a>
                 </ProjectLinks>
               </ContentDetails>
             </Project>
             <Project>
-              <ProjectImg src={HighTech} />
+              <ProjectImg src={HighTech} alt="hightech" />
               <ContentDetails>
                 <ProjectName>HighTech</ProjectName>
                 <ProjectInfo>
                   {t("projects.project2")}
                 </ProjectInfo>
                 <ProjectLangs>
-                  <ProjectLang src={HTML} />
-                  <ProjectLang src={CSS} />
-                  <ProjectLang src={JS} />
+                  <ProjectLang src={HTML} alt="html" />
+                  <ProjectLang src={CSS} alt="css" />
+                  <ProjectLang src={JS} alt="javascript" />
                 </ProjectLangs>
                 <ProjectLinks>
                   <a href="https://github.com/LeoPaez/high-tech" target="_blank">
                     <GHBtn>
-                      <GHBtnIcon src={GitHub} />
+                      <GHBtnIcon src={GitHub} alt="github" />
                       GitHub
                     </GHBtn>
                   </a>
                   <a href="https://high-tech.vercel.app/" target="_blank">
                     <DemoBtn>
                       Demo
-                      <DemoBtnIcon src={ArrowRight} />
+                      <DemoBtnIcon src={ArrowRight} alt="arrow right" />
                     </DemoBtn>
                   </a>
                 </ProjectLinks>
               </ContentDetails>
             </Project>
             <Project>
-              <ProjectImg src={CrudApp} />
+              <ProjectImg src={CrudApp} alt="cruddapp" />
               <ContentDetails>
                 <ProjectName>Crud App</ProjectName>
                 <ProjectInfo>
                   {t("projects.project3")}
                 </ProjectInfo>
                 <ProjectLangs>
-                  <ProjectLang src={JS} />
-                  <ProjectLang src={ReactIcon} />
-                  <ProjectLang src={Material} />
+                  <ProjectLang src={JS} alt="javascript" />
+                  <ProjectLang src={ReactIcon} alt="react" />
+                  <ProjectLang src={Material} alt="material ui" />
                 </ProjectLangs>
                 <ProjectLinks>
                   <a href="https://github.com/LeoPaez/crud-app-react" target="_blank">
                     <GHBtn>
-                      <GHBtnIcon src={GitHub} />
+                      <GHBtnIcon src={GitHub} alt="github" />
                       GitHub
                     </GHBtn>
                   </a>
                   <a href="https://crud-app-react1.vercel.app/" target="_blank">
                     <DemoBtn>
                       Demo
-                      <DemoBtnIcon src={ArrowRight} />
+                      <DemoBtnIcon src={ArrowRight} alt="arrow right" />
                     </DemoBtn>
                   </a>
                 </ProjectLinks>
               </ContentDetails>
             </Project>
             <Project>
-              <ProjectImg src={FurniShop} />
+              <ProjectImg src={FurniShop} alt="furnishop" />
               <ContentDetails>
                 <ProjectName>FurniShop</ProjectName>
                 <ProjectInfo>
                   {t("projects.project4")}
                 </ProjectInfo>
                 <ProjectLangs>
-                  <ProjectLang src={JS} />
-                  <ProjectLang src={ReactIcon} />
-                  <ProjectLang src={Tailwind} />
+                  <ProjectLang src={JS} alt="javascript" />
+                  <ProjectLang src={ReactIcon} alt="react" />
+                  <ProjectLang src={Tailwind} alt="tailwind" />
                 </ProjectLangs>
                 <ProjectLinks>
                   <a href="https://github.com/LeoPaez/E5-Javascript" target="_blank">
                       <GHBtn>
-                        <GHBtnIcon src={GitHub} />
+                        <GHBtnIcon src={GitHub} alt="github" />
                         GitHub
                       </GHBtn>
                   </a>
                   <a href="https://e5-javascript-1.vercel.app/" target="_blank">
                       <DemoBtn>
                         Demo
-                        <DemoBtnIcon src={ArrowRight} />
+                        <DemoBtnIcon src={ArrowRight} alt="arrow right" />
                       </DemoBtn>
                   </a>
                 </ProjectLinks>
@@ -341,7 +341,7 @@ const Projects = () => {
           <a href="https://github.com/LeoPaez" target="_blank">
             <MoreProjectsBtn>
               {t("projects.viewMoreButton")}
-              <MoreProjectsBtnIcon src={ArrowRight} />
+              <MoreProjectsBtnIcon src={ArrowRight} alt="arrow right" />
             </MoreProjectsBtn>
           </a>
         </Cont>

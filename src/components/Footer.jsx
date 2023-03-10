@@ -55,21 +55,21 @@ const Footer = () => {
     <>
       <Cont>
         <FooterCont>
-          <a href=".">
-            <FooterLogo src={WhiteLogo} />
+          <a href="/">
+            <FooterLogo src={WhiteLogo} alt="lp logo white" />
           </a>
           <Border />
           <FooterRights>©2023 {t("footer.rights")}</FooterRights>
         </FooterCont>
         <FooterCont>
           <Social href="https://www.linkedin.com/in/leonel-paez/" target="_blank">
-            <SocialLogo src={Linkedin} />
+            <SocialLogo src={Linkedin} alt="linkedin" />
           </Social>
           <Social href="https://github.com/LeoPaez" target="_blank">
-            <SocialLogo src={GitHub} />
+            <SocialLogo src={GitHub} alt="github" />
           </Social>
           <Social href="https://walink.co/9e973f" target="_blank">
-            <SocialLogo src={Wpp} />
+            <SocialLogo src={Wpp} alt="whatsapp" />
           </Social>
         </FooterCont>
       </Cont>

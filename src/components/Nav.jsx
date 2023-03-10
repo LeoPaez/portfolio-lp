@@ -107,8 +107,8 @@ const Nav = () => {
         <NavBar id="nav">
           <NavCont>
             <Burger />
-            <Link href=".">
-              <Logo src={WhiteLogo} />
+            <Link href="/">
+              <Logo src={WhiteLogo} alt="lp white logo" />
             </Link>
             <LinkNavCont>
               <LinkNav href='#nav'>{t("nav.home")}</LinkNav>
@@ -119,13 +119,13 @@ const Nav = () => {
           </NavCont>
           <NavCont>
             <Social href="https://www.linkedin.com/in/leonel-paez/" target="_blank">
-              <SocialLogo src={Linkedin} />
+              <SocialLogo src={Linkedin} alt="linkedin" />
             </Social>
             <Social href="https://github.com/LeoPaez" target="_blank">
-              <SocialLogo src={GitHub} />
+              <SocialLogo src={GitHub} alt="github" />
             </Social>
             <Social href="https://walink.co/9e973f" target="_blank">
-              <SocialLogo src={Wpp} />
+              <SocialLogo src={Wpp} alt="whatsapp" />
             </Social>
           </NavCont>
         </NavBar>

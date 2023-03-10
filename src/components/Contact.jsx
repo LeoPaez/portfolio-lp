@@ -162,17 +162,17 @@ const Contact = () => {
             <ContactTitle>{t("contact.title")}</ContactTitle>
             <ContactInfo>
               <ContactIconBg>
-                <ContactIcon src={Location} />
+                <ContactIcon src={Location} alt="location" />
               </ContactIconBg>
               <ContactInfoText>Mar del Plata, Bs. As, Argentina</ContactInfoText>
             </ContactInfo>
             <ContactInfo>
               <ContactIconBg>
-                <ContactIcon src={Email} />
+                <ContactIcon src={Email} alt="email" />
               </ContactIconBg>
               <ContactInfoText>lpaezbusiness@gmail.com</ContactInfoText>
             </ContactInfo>
-            <ContactImg src={ContactDraw} />
+            <ContactImg src={ContactDraw} alt="contact draw" />
           </ContactItem>
           <ContactItem>
             <ContactForm action="https://formsubmit.co/lpaezbusiness@gmail.com" method="POST" onSubmit={onSubmit}>
