@@ -9,6 +9,7 @@ import Styled from "../assets/langs/styled.png"
 import ReactRouter from "../assets/langs/react-router.png"
 import Tailwind from "../assets/langs/tailwind.png"
 import Material from "../assets/langs/material-ui.png"
+import Redux from "../assets/langs/redux.svg"
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 import { useTranslation } from "react-i18next"
@@ -238,6 +239,13 @@ const About = () => {
                   data-tooltip-delay-show={100}
                 >
                   <SkillsLogo src={ReactIcon} alt="react" />
+                </a>
+                <a 
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="Redux"
+                  data-tooltip-delay-show={100}
+                >
+                  <SkillsLogo src={Redux} alt="redux" />
                 </a>
                 <a 
                   data-tooltip-id="my-tooltip"
