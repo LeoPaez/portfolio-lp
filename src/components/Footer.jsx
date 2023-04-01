@@ -59,7 +59,7 @@ const Footer = () => {
             <FooterLogo src={WhiteLogo} alt="lp logo white" />
           </a>
           <Border />
-          <FooterRights>©2023 {t("footer.rights")}</FooterRights>
+          <FooterRights>&copy;2023 {t("footer.rights")}</FooterRights>
         </FooterCont>
         <FooterCont>
           <Social href="https://www.linkedin.com/in/leonel-paez/" target="_blank">
