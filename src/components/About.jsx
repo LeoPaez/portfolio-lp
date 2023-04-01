@@ -119,7 +119,7 @@ const Exp = styled.div`
   flex-direction: column;
 `
 const ExpNum = styled.p`
-  color: #FFB300;
+  color: #FFAA00;
   font-size: 20px;
   @media (max-width: 1600px){
     font-size: 19px;

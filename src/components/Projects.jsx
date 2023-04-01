@@ -154,16 +154,16 @@ const DemoBtn = styled.button`
   display: flex;
   align-items: center;
   gap: 6px;
-  color: #e9ecef;
+  color: #f8f9fa;
   padding: 10px 16px;
   border-radius: 6px;
   background-color: transparent;
-  border: 2px solid #FF9900;
+  border: 2px solid #FF9100;
   font-size: 15px;
   transition: all 0.3s ease 0s;
   :hover {
-    background-color: #FFA600;
-    border: 2px solid #FFA600;
+    background-color: #FF8500;
+    border: 2px solid #FF8500;
   }
 `
 const DemoBtnIcon = styled.img`
@@ -173,7 +173,7 @@ const GHBtn = styled.button`
   display: flex;
   align-items: center;
   background-color: transparent;
-  color: #e9ecef;
+  color: #f8f9fa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,16 +200,16 @@ const MoreProjectsBtn = styled.button`
   font-size: 15px;
   letter-spacing: 0.8px;
   background-color: transparent;
-  border: 2px solid #FF9900;
-  color: #e9ecef;
+  border: 2px solid #FF9100;
+  color: #f8f9fa;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 600;
   transition: all 0.3s ease 0s;
   border-radius: 4px;
   :hover {
-    background-color: #FFA600;
-    border: 2px solid #FFA600;
+    background-color: #FF8500;
+    border: 2px solid #FF8500;
   }
 `
 const MoreProjectsBtnIcon = styled.img`

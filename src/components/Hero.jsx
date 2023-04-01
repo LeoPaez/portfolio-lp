@@ -119,16 +119,13 @@ const HeroTitleCont = styled.div`
   display: flex;
   gap: 8px;
   overflow: hidden;
-  /* -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0,0,0); */
 `
 const HeroTitleSpan = styled.span`
-  color: #f8f9fa;
+  color: #faf9f8;
 `
 const HeroTitle = styled.h1`
   color: #dee2e6;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   display:inline-block;
   overflow:hidden;
   white-space:nowrap;
@@ -137,7 +134,6 @@ const HeroTitle = styled.h1`
     animation-iteration-count: 1;
   }
   :last-of-type ${HeroTitleSpan} {
-    /* margin-left: -200px; */
     animation: ${slidein} 2.4s infinite;
     animation-iteration-count: 1;
   }
@@ -190,15 +186,15 @@ const HeroButton = styled.button`
   border-radius: 4px;
   padding: 12px 0;
   width: 140px;
-  background-color: #FF9900;
-  color: #e9ecef;
+  background-color: #FF9100;
+  color: #f8f9fa;
   font-weight: 600;
   transition: all 0.3s ease 0s;
   font-size: 15px;
   letter-spacing: 0.5px;
   cursor: pointer;
   :hover {
-    background-color: #FFA600;
+    background-color: #FF8500;
   }
   @media (max-width: 500px){
     width: 120px;
@@ -214,16 +210,16 @@ const HeroButtonCV = styled.button`
   padding: 10px 0;
   width: 140px;
   background-color: transparent;
-  color: #e9ecef;
+  color: #f8f9fa;
   font-weight: 600;
   transition: all 0.3s ease 0s;
   font-size: 15px;
   letter-spacing: 0.5px;
   cursor: pointer;
-  border: 2px solid #FF9900;
+  border: 2px solid #FF9100;
   :hover {
-    background-color: #FFA600;
-    border: 2px solid #FFA600;
+    background-color: #FF8500;
+    border: 2px solid #FF8500;
   }
   @media (max-width: 500px){
     width: 120px;

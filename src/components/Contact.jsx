@@ -102,13 +102,13 @@ const ContactSubmit = styled.button`
   cursor: pointer;
   transition: all 0.3s ease 0s;
   font-size: 16px;
-  color: #e9ecef;
+  color: #f8f9fa;
   margin-top: -6px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  background-color: #FF9900;
+  background-color: #FF9100;
   :hover {
-    background-color: #FFA600;
+    background-color: #FF8500;
   }
   @media (max-width: 900px){
     padding: 10px 50px;
