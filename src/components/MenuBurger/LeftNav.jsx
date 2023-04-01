@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTranslation } from "react-i18next"
 
 const Ul = styled.ul`
   list-style: none;
@@ -38,20 +39,21 @@ const Ul = styled.ul`
 `;
 
 const LeftNav = ({ open}) => {
+  const [t] = useTranslation("global")
 
   return (
     <Ul open={open}>
       <a href="#nav">
-        <li>Inicio</li>
+        <li>{t("nav.home")}</li>
       </a>
       <a href="#about">
-        <li>Sobre Mi</li>
+        <li>{t("nav.about")}</li>
       </a>
       <a href="#projects">
         <li>Portfolio</li>
       </a>
       <a href="#contact">
-        <li>Contacto</li>
+        <li>{t("nav.contact")}</li>
       </a>
       <a href="https://www.linkedin.com/in/leonel-paez/" target="_blank">
         <li>LinkedIn</li>
