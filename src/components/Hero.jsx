@@ -172,7 +172,7 @@ const HeroInfo = styled.p`
   margin-bottom: 20px;
   line-height: 22px;
   letter-spacing: 0.4px;
-  width: 90%;
+  width: 100%;
   @media (max-width: 1300px){
     font-size: 16px;
   }
