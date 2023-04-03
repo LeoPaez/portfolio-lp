@@ -27,7 +27,7 @@ const Cont = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 100px 0;
+  padding: 100px 0 80px;
   width: 50%;
   @media (max-width: 1500px){
     width: 60%;
