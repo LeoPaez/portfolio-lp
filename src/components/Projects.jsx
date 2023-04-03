@@ -238,13 +238,13 @@ const Projects = () => {
                   <ProjectLang src={Tailwind} alt="tailwind" />
                 </ProjectLangs>
                 <ProjectLinks>
-                  <a href="https://github.com/LeoPaez/frontendpage" target="_blank">
+                  <a href="https://github.com/LeoPaez/hotel-oasis" target="_blank">
                     <GHBtn>
                       <GHBtnIcon src={GitHub} alt="github" />
                       GitHub
                     </GHBtn>
                   </a>
-                  <a href="https://front-end-store1.vercel.app/" target="_blank">
+                  <a href="https://hotel-oasis-gilt.vercel.app/" target="_blank">
                     <DemoBtn>
                       Demo
                       <DemoBtnIcon src={ArrowRight} alt="arrow right" />
@@ -322,13 +322,13 @@ const Projects = () => {
                   <ProjectLang src={Tailwind} alt="tailwind" />
                 </ProjectLangs>
                 <ProjectLinks>
-                  <a href="https://github.com/LeoPaez/E5-Javascript" target="_blank">
+                  <a href="https://github.com/LeoPaez/furni-shop" target="_blank">
                       <GHBtn>
                         <GHBtnIcon src={GitHub} alt="github" />
                         GitHub
                       </GHBtn>
                   </a>
-                  <a href="https://e5-javascript-1.vercel.app/" target="_blank">
+                  <a href="https://furni-shop1.vercel.app/" target="_blank">
                       <DemoBtn>
                         Demo
                         <DemoBtnIcon src={ArrowRight} alt="arrow right" />
