@@ -27,7 +27,7 @@ const Cont = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 110px;
+  padding: 100px 0;
   width: 50%;
   @media (max-width: 1500px){
     width: 60%;
@@ -77,7 +77,7 @@ const ContentDetails = styled.div`
 const ProjectsTitle = styled.h2`
   font-size: 26px;
   border-bottom: 1px solid #495057;
-  margin: 70px 0 50px;
+  margin: 0 0 50px;
   padding: 0 50px 8px 50px;
 `
 const ProjectsCont = styled.div`

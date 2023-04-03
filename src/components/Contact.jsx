@@ -12,6 +12,7 @@ const Flex = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 60px 0 180px;
 `
 const ContactCont = styled.div`
   height: 440px;
@@ -21,7 +22,6 @@ const ContactCont = styled.div`
   background-color: #212529;
   width: 46%;
   border-radius: 8px;
-  margin-bottom: 140px;
   @media (max-width: 1500px){
     width: 60%;
   }

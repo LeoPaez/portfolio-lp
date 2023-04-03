@@ -25,9 +25,7 @@ const AboutCont = styled.div`
   flex-direction: column;
   justify-content: center;
   align-content: space-between;
-  height: 400px;
-  padding: 20px 0;
-  margin-bottom: 60px;
+  padding: 50px 0 90px;
   width: 50%;
   @media (max-width: 1500px){
     width: 60%;
@@ -62,7 +60,6 @@ const AboutItem = styled.div`
   align-items: center;
   flex-direction: column;
   width: 430px;
-  margin-top: 20px;
   :last-of-type {
     border: 2px solid #495057;
     padding: 10px 0 10px 0;
@@ -79,8 +76,8 @@ const AboutItem = styled.div`
 const AboutTitle = styled.h3`
   font-size: 26px;
   border-bottom: 1px solid #343a40;
-  padding: 0 50px 8px 50px;
-  margin: -20px auto 40px;
+  padding: 0 50px 8px;
+  margin: 0 auto 40px;
   @media (max-width: 900px){
     margin: 0 auto;
   }
@@ -143,7 +140,7 @@ const SkillsTitle = styled.h4`
   margin-bottom: 20px;
   color: #ced4da;
   border-bottom: 1px solid #495057;
-  padding: 0 20px 4px 20px;
+  padding: 0 20px 4px;
 `
 const SkillsCont = styled.div`
   display: flex;

@@ -35,7 +35,6 @@ const HeroCont = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 120px 0 140px;
-  /* gap: 100px; */
   width: 50%;
   @media (max-width: 1500px){
     width: 60%;
