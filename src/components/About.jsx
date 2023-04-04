@@ -53,6 +53,7 @@ const AboutItems = styled.div`
   @media (max-width: 900px){
     flex-direction: column;
     gap: 30px;
+    padding: 0 0 50px;
   }
 `
 const AboutItem = styled.div`
@@ -85,7 +86,7 @@ const AboutTitle = styled.h3`
 const AboutInfo = styled.p`
   font-size: 17px;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color: #DEE2E6;
   line-height: 22px;
   letter-spacing: 0.4px;
