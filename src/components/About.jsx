@@ -80,7 +80,7 @@ const AboutTitle = styled.h3`
   padding: 0 50px 8px;
   margin: 0 auto 40px;
   @media (max-width: 900px){
-    margin: 0 auto;
+    margin: 0 auto 30px;
   }
 `
 const AboutInfo = styled.p`
