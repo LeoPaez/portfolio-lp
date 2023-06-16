@@ -225,34 +225,6 @@ const Projects = () => {
         <Cont id="projects">
           <ProjectsTitle>{t("projects.title")}</ProjectsTitle>
           <ProjectsCont>
-          <Project>
-              <ProjectImg src={Oasis} alt="oasis" />
-              <ContentDetails>
-                <ProjectName>Hotel Oasis</ProjectName>
-                <ProjectInfo>
-                  {t("projects.project1")}
-                </ProjectInfo>
-                <ProjectLangs>
-                  <ProjectLang src={JS} alt="javascript" />
-                  <ProjectLang src={ReactIcon} alt="react" />
-                  <ProjectLang src={Tailwind} alt="tailwind" />
-                </ProjectLangs>
-                <ProjectLinks>
-                  <a href="https://github.com/LeoPaez/hotel-oasis" target="_blank">
-                    <GHBtn>
-                      <GHBtnIcon src={GitHub} alt="github" />
-                      GitHub
-                    </GHBtn>
-                  </a>
-                  <a href="https://hotel-oasis-gilt.vercel.app/" target="_blank">
-                    <DemoBtn>
-                      Demo
-                      <DemoBtnIcon src={ArrowRight} alt="arrow right" />
-                    </DemoBtn>
-                  </a>
-                </ProjectLinks>
-              </ContentDetails>
-            </Project>
             <Project>
               <ProjectImg src={HighTech} alt="hightech" />
               <ContentDetails>
@@ -280,7 +252,35 @@ const Projects = () => {
                   </a>
                 </ProjectLinks>
               </ContentDetails>
-            </Project>
+            </Project> {/* Termina proyecto */}
+            <Project>
+              <ProjectImg src={Oasis} alt="oasis" />
+              <ContentDetails>
+                <ProjectName>Hotel Oasis</ProjectName>
+                <ProjectInfo>
+                  {t("projects.project1")}
+                </ProjectInfo>
+                <ProjectLangs>
+                  <ProjectLang src={JS} alt="javascript" />
+                  <ProjectLang src={ReactIcon} alt="react" />
+                  <ProjectLang src={Tailwind} alt="tailwind" />
+                </ProjectLangs>
+                <ProjectLinks>
+                  <a href="https://github.com/LeoPaez/hotel-oasis" target="_blank">
+                    <GHBtn>
+                      <GHBtnIcon src={GitHub} alt="github" />
+                      GitHub
+                    </GHBtn>
+                  </a>
+                  <a href="https://hotel-oasis-gilt.vercel.app/" target="_blank">
+                    <DemoBtn>
+                      Demo
+                      <DemoBtnIcon src={ArrowRight} alt="arrow right" />
+                    </DemoBtn>
+                  </a>
+                </ProjectLinks>
+              </ContentDetails>
+            </Project> {/* Termina proyecto */}
             <Project>
               <ProjectImg src={CrudApp} alt="cruddapp" />
               <ContentDetails>
@@ -308,7 +308,7 @@ const Projects = () => {
                   </a>
                 </ProjectLinks>
               </ContentDetails>
-            </Project>
+            </Project> {/* Termina proyecto */}
             <Project>
               <ProjectImg src={FurniShop} alt="furnishop" />
               <ContentDetails>
@@ -336,7 +336,7 @@ const Projects = () => {
                   </a>
                 </ProjectLinks>
               </ContentDetails>
-            </Project>
+            </Project> {/* Termina proyecto */}
           </ProjectsCont>
           <a href="https://github.com/LeoPaez" target="_blank">
             <MoreProjectsBtn>
