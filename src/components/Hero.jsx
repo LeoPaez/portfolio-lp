@@ -252,7 +252,7 @@ const Hero = () => {
               <a href="#contact">
                 <HeroButton>{t("header.hireMeButton")}</HeroButton>
               </a>
-              <a href="https://drive.google.com/file/d/1kPyJGFlNaq3_wnxgKyHrE4xSAZ40KFlv/view?usp=sharing" target="_blank">
+              <a href="https://drive.google.com/file/d/1X4smqoNwPleKQGvhFO444Daa0ozyLkow/view?usp=drive_link" target="_blank">
                 <HeroButtonCV>
                   CV
                   <HeroButtonCVIcon src={ArrowRight} alt="arrow right" />
