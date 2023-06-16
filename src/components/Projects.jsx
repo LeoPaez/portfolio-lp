@@ -266,13 +266,13 @@ const Projects = () => {
                   <ProjectLang src={JS} alt="javascript" />
                 </ProjectLangs>
                 <ProjectLinks>
-                  <a href="https://github.com/LeoPaez/high-tech" target="_blank">
+                  <a href="https://github.com/LeoPaez/high-tech-v2" target="_blank">
                     <GHBtn>
                       <GHBtnIcon src={GitHub} alt="github" />
                       GitHub
                     </GHBtn>
                   </a>
-                  <a href="https://high-tech.vercel.app/" target="_blank">
+                  <a href="https://high-tech-v2.vercel.app/" target="_blank">
                     <DemoBtn>
                       Demo
                       <DemoBtnIcon src={ArrowRight} alt="arrow right" />
