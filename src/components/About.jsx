@@ -1,8 +1,11 @@
 import React from 'react'
+
 import styled from 'styled-components'
+
 import HTML from "../assets/langs/html.svg"
 import CSS from "../assets/langs/css.svg"
 import JS from "../assets/langs/javascript.svg"
+import TS from "../assets/langs/typescript.svg"
 import ReactIcon from "../assets/langs/react.png"
 import Chakra from "../assets/langs/chakra-ui.png"
 import Styled from "../assets/langs/styled.png"
@@ -10,6 +13,8 @@ import ReactRouter from "../assets/langs/react-router.png"
 import Tailwind from "../assets/langs/tailwind.png"
 import Material from "../assets/langs/material-ui.png"
 import Redux from "../assets/langs/redux.svg"
+import Figma from "../assets/langs/figma.png"
+
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 import { useTranslation } from "react-i18next"
@@ -233,6 +238,13 @@ const About = () => {
                 </a>
                 <a 
                   data-tooltip-id="my-tooltip"
+                  data-tooltip-content="TypeScript"
+                  data-tooltip-delay-show={100}
+                >
+                  <SkillsLogo src={TS} alt="typescript" />
+                </a>
+                <a 
+                  data-tooltip-id="my-tooltip"
                   data-tooltip-content="React"
                   data-tooltip-delay-show={100}
                 >
@@ -279,6 +291,13 @@ const About = () => {
                   data-tooltip-delay-show={100}
                 >
                   <SkillsLogo src={Material} alt="material ui" />
+                </a>
+                <a 
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="Figma"
+                  data-tooltip-delay-show={100}
+                >
+                  <SkillsLogo src={Figma} alt="figma" />
                 </a>
                 <Tooltip id="my-tooltip" />
               </SkillsCont>
