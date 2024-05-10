@@ -7,6 +7,7 @@ import CSS from "../assets/langs/css.svg"
 import JS from "../assets/langs/javascript.svg"
 import TS from "../assets/langs/typescript.svg"
 import ReactIcon from "../assets/langs/react.png"
+import NextIcon from "../assets/langs/next-js.png"
 import Chakra from "../assets/langs/chakra-ui.png"
 import Styled from "../assets/langs/styled.png"
 import ReactRouter from "../assets/langs/react-router.png"
@@ -252,17 +253,17 @@ const About = () => {
                 </a>
                 <a 
                   data-tooltip-id="my-tooltip"
+                  data-tooltip-content="Next.js"
+                  data-tooltip-delay-show={100}
+                >
+                  <SkillsLogo src={NextIcon} alt="next.js" />
+                </a>
+                <a 
+                  data-tooltip-id="my-tooltip"
                   data-tooltip-content="Redux"
                   data-tooltip-delay-show={100}
                 >
                   <SkillsLogo src={Redux} alt="redux" />
-                </a>
-                <a 
-                  data-tooltip-id="my-tooltip"
-                  data-tooltip-content="React Router"
-                  data-tooltip-delay-show={100}
-                >
-                  <SkillsLogo src={ReactRouter} alt="react router" />
                 </a>
                 <a 
                   data-tooltip-id="my-tooltip"
