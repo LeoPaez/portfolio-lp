@@ -60,7 +60,7 @@ const Footer = () => {
             <FooterLogo src={WhiteLogo} alt="lp logo white" />
           </a>
           <Border />
-          <FooterRights>&copy; {year} {("footer.rights")}</FooterRights>
+          <FooterRights>&copy; {year} {t("footer.rights")}</FooterRights>
         </FooterCont>
         <FooterCont>
           <Social href="https://www.linkedin.com/in/leonel-paez/" target="_blank">
