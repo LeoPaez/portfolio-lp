@@ -244,7 +244,7 @@ const Hero = () => {
                 <HeroTitleSpan> Leonel Paez</HeroTitleSpan>
               </HeroTitle>
             </HeroTitleCont>
-            <HeroSubTitle>Front End Developer</HeroSubTitle>
+            <HeroSubTitle>Frontend Developer</HeroSubTitle>
             <HeroInfo>
               {t("header.info")}
             </HeroInfo>
