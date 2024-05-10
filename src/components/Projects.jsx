@@ -236,6 +236,7 @@ const Projects = () => {
                   <ProjectLang src={HTML} alt="html" />
                   <ProjectLang src={CSS} alt="css" />
                   <ProjectLang src={JS} alt="javascript" />
+                  <ProjectLang src={ReactIcon} alt="react" />
                 </ProjectLangs>
                 <ProjectLinks>
                   <a href="https://github.com/LeoPaez/high-tech-v2" target="_blank">
