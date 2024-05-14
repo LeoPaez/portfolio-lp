@@ -14,7 +14,7 @@ import ArrowRight from "../assets/icons/arrow-right.png"
 import Oasis from "../assets/projects/hotel-oasis.webp"
 import HighTech from "../assets/projects/high-tech.webp"
 import FurniShop from "../assets/projects/furni-shop.webp"
-import CrudApp from "../assets/projects/crud-app.webp"
+import Beatstore from "../assets/projects/beatstore.webp"
 import { useTranslation } from "react-i18next"
 
 const Flex = styled.div`
@@ -283,25 +283,24 @@ const Projects = () => {
               </ContentDetails>
             </Project> {/* Termina proyecto */}
             <Project>
-              <ProjectImg src={CrudApp} alt="cruddapp" />
+              <ProjectImg src={Beatstore} alt="beatstore" />
               <ContentDetails>
-                <ProjectName>Crud App</ProjectName>
+                <ProjectName>Beatstore</ProjectName>
                 <ProjectInfo>
                   {t("projects.project3")}
                 </ProjectInfo>
                 <ProjectLangs>
                   <ProjectLang src={JS} alt="javascript" />
                   <ProjectLang src={ReactIcon} alt="react" />
-                  <ProjectLang src={Material} alt="material ui" />
                 </ProjectLangs>
                 <ProjectLinks>
-                  <a href="https://github.com/LeoPaez/crud-app-react" target="_blank">
+                  <a href="https://github.com/LeoPaez/beatstore" target="_blank">
                     <GHBtn>
                       <GHBtnIcon src={GitHub} alt="github" />
                       GitHub
                     </GHBtn>
                   </a>
-                  <a href="https://crud-app-react1.vercel.app/" target="_blank">
+                  <a href="https://beatstore-seven.vercel.app/" target="_blank">
                     <DemoBtn>
                       Demo
                       <DemoBtnIcon src={ArrowRight} alt="arrow right" />
