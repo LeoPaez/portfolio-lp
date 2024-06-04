@@ -14,6 +14,8 @@ Librerias y herramientas usadas:
 - SweetAlert 2
 - i18next
 
+[Link del proyecto en producción](https://lp-portfolio.vercel.app/)
+
 <p align="center">
   <img src="https://i.ibb.co/qJfMgdH/Leonel-Paez-Portfolio.png" alt="Foto del proyecto">
 </p>
