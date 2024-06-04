@@ -34,6 +34,9 @@ const NavCont = styled.div`
     :first-child {
       justify-content: space-between;
     }
+    :last-child {
+      display: none;
+    }
   }
 `
 
