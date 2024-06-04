@@ -21,18 +21,9 @@ const ContactInput = styled.input`
   color: #ced4da;
   border: 2px solid #343a40;
   transition: all 0.3s ease 0s;
-  @media (max-width: 900px){
-    padding-right: 120px;
-  }
-  @media (max-width: 500px){
-    padding-right: 60px;
-  }
-  @media (max-width: 400px){
-    padding-right: 20px;
-  }
   :focus {
     outline: none;
-    border: 2px solid #ff9900;
+    border: 2px solid #FF8500;
   }
   ::placeholder {
     color: #ced4da;
@@ -43,6 +34,10 @@ const ContactInput = styled.input`
 	${props => props.valid === 'false' && css`
     border: 2px solid #cc0000;
 	`}
+
+  @media (max-width: 450px){
+    width: 220px
+  }
 `
 const Error = styled.p`
   position: absolute;

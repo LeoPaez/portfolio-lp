@@ -1,10 +1,23 @@
-import React, { useLayoutEffect } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import { useLayoutEffect } from 'react'
 import { useInView } from "react-intersection-observer"
 import styled from 'styled-components'
+import { motion, useAnimation } from 'framer-motion'
 
+/* Wrapper to center and space the sections from the corners */
 const Cont = styled(motion.div)`
-  position: relative;
+  width: 50%;
+  @media (max-width: 1700px){
+    width: 60%;
+  }
+  @media (max-width: 1500px){
+    width: 70%;
+  }
+  @media (max-width: 1100px){
+    width: 80%;
+  }
+  @media (max-width: 600px){
+    width: 90%;
+  }
   z-index: ${props => props.zIndex || 0};
 `
 const boxVariant = {

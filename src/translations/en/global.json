@@ -6,21 +6,28 @@
   },
   "header": {
     "title": "Hi, I'm",
-    "info": "Inventive developer located in the Pearl of the Atlantic. Enthusiastic to expand my knowledge day by day, managing to carry out incredible projects that gave me experience to create websites from scratch to final product.",
+    "info": "An inventive Frontend Developer enthusiastic about creating unique, user-friendly and sustainable web experiences over time.",
     "hireMeButton": "Hire Me"
   },
   "about": {
-    "title": "About Me",
+    "sectionBadge": "About me",
+    "title": "Transforming visual concepts into experiences",
     "info": "My vision is to be able to create websites with a good criteria, that are adaptable, dynamic, accessible and with my own touch of design to give it my personal brand and without leaving aside the efficiency for a good user experience. I like to be aware of new technologies and experiment on my own with new challenges.",
     "years": "Years of coding",
     "projects": "Projects completed"
   },
+  "skills": {
+    "title": "Technologies and tools with which I work"
+  },
   "projects": {
-    "title": "Projects",
-    "project1": "Hotel Oasis is a website where you can rent luxury rooms and filter them according to your needs",
-    "project2": "Hardware store where you can get all kinds of components for your computer",
-    "project3": "Beats store to find the best tracks for your songs",
-    "project4": "Furniture store where you can buy the best furniture for your home",
+    "sectionBadge": "Projects",
+    "title": "Some of my most relevant works",
+    "project1": "Hardware store where you can get all the necessary components to build your computer.",
+    "project2": "Page to book luxury hotel rooms, offering different options according to your needs.",
+    "project3": "Modern furniture store for different purposes, ideal to turn your home into what you are looking for.",
+    "project4": "Beats store to find the best melodies for your songs and catalog your works as a producer.",
+    "gitHubLink": "View code",
+    "projectLink": "View demo",
     "viewMoreButton": "View More"
   },
   "contact": {
@@ -29,6 +36,12 @@
     "subject": "Subject",
     "msg": "Message",
     "submitButton": "Submit"
+  },
+  "formError": {
+    "name": "Please enter only letters",
+    "email": "Please enter a valid email address",
+    "subject": "Please enter a subject",
+    "msg": "Please enter a message"
   },
   "formAlert" : {
     "title": "Wait...",

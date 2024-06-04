@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { useTranslation } from "react-i18next"
 
@@ -13,23 +12,29 @@ const Ul = styled.ul`
     width: auto;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    :hover {
-      color: #CED4DA;
-    }
     :first-of-type {
       margin-top: 10px;
+    }
+    :hover {
+      border-color: #FC7903;
+    }
+  }
+  a {
+    transition: all 0.3s ease 0s;
+    :hover {
+      opacity: 0.8;
     }
   }
   @media (max-width: 800px) {
     display: block;
     flex-flow: column nowrap;
     background-color: #495057;
-    position: fixed;
-    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+    position: absolute;
+    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-170%)'};
     top: 0;
     left: 0;
     height: 100vh;
-    width: 300px;
+    width: 260px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     li {
@@ -43,27 +48,27 @@ const LeftNav = ({ open}) => {
 
   return (
     <Ul open={open}>
-      <a href="#nav">
-        <li>{t("nav.home")}</li>
-      </a>
-      <a href="#about">
-        <li>{t("nav.about")}</li>
-      </a>
-      <a href="#projects">
-        <li>Portfolio</li>
-      </a>
-      <a href="#contact">
-        <li>{t("nav.contact")}</li>
-      </a>
-      <a href="https://www.linkedin.com/in/leonel-paez/" target="_blank">
-        <li>LinkedIn</li>
-      </a>
-      <a href="https://github.com/LeoPaez" target="_blank">
-        <li>GitHub</li>
-      </a>
-      <a href="https://walink.co/9e973f" target="_blank">
-        <li>WhatsApp</li>
-      </a>
+      <li>
+        <a href="#about">{t("nav.about")}</a>
+      </li>
+      <li>
+        <a href="#skills">Skills</a>
+      </li>
+      <li>
+        <a href="#projects">Portfolio</a>
+      </li>
+      <li>
+        <a href="#contact">{t("nav.contact")}</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/leonel-paez/" target="_blank">LinkedIn</a>
+      </li>
+      <li>
+        <a href="https://github.com/LeoPaez" target="_blank">GitHub</a>
+      </li>
+      <li>
+        <a href="https://walink.co/9e973f" target="_blank">WhatsApp</a>
+      </li>
     </Ul>
   )
 }

@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import LeftNav from './LeftNav';
 
 const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
-  /* position: fixed; */
   top: 15px;
   left: 20px;
   display: none;

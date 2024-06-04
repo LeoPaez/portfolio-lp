@@ -1,8 +1,11 @@
-import React from 'react'
-import { useTranslation } from "react-i18next"
 import styled, { keyframes } from 'styled-components'
-import HeroDraw from "../assets/draw-header.svg"
-import ArrowRight from "../assets/icons/arrow-right.png"
+import { useTranslation } from "react-i18next"
+
+import HeroDraw from "../assets/draws/hero-draw.svg"
+
+import { Button } from "./Buttons/Button"
+import { LinkButton } from "./Buttons/LinkButton"
+import { Flex } from "./Nav"
 
 const showup = keyframes`
   0% {opacity:0;}
@@ -25,33 +28,15 @@ const rotate = keyframes`
   }
 `
 
-const Flex = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
 const HeroCont = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 120px 0 140px;
-  width: 50%;
-  @media (max-width: 1500px){
-    width: 60%;
-  }
-  @media (max-width: 1300px){
-    width: 70%;
-  }
-  @media (max-width: 1000px){
-    width: 80%;
-  }
   @media (max-width: 800px){
     flex-direction: column;
     gap: 60px;
     padding: 80px 0 100px;
-  }
-  @media (max-width: 600px){
-    width: 85%;
   }
 `
 const HeroItem = styled.div`
@@ -62,7 +47,7 @@ const HeroItem = styled.div`
   width: 45%;
   :last-of-type {
     align-items: center;
-
+    z-index: 1;
   }
   @media (max-width: 1100px){
     width: 48%;
@@ -72,6 +57,7 @@ const HeroItem = styled.div`
   }
   @media (max-width: 800px){
     width: 100%;
+    align-items: center;
   }
 `
 const HeroBackGround = styled.div`
@@ -101,17 +87,14 @@ const HeroImg = styled.img`
   @media (max-width: 1100px){
     width: 340px;
   }
-  @media (max-width: 900px){
+  @media (max-width: 1000px){
     width: 320px;
   }
-  @media (max-width: 800px){
-    width: 380px;
+  @media (max-width: 900px){
+    width: 300px;
   }
   @media (max-width: 500px){
-    width: 340px;
-  }
-  @media (max-width: 400px){
-    width: 320px;
+    width: 260px;
   }
 `
 const HeroTitleCont = styled.div`
@@ -121,19 +104,23 @@ const HeroTitleCont = styled.div`
 `
 const HeroTitleSpan = styled.span`
   color: #faf9f8;
+  font-size: 34px;
+  @media (max-width: 600px){
+    font-size: 30px;
+  }
 `
 const HeroTitle = styled.h1`
   color: #dee2e6;
-  margin-bottom: 6px;
   display:inline-block;
   overflow:hidden;
   white-space:nowrap;
+  font-size: 28px;
   :first-of-type {
     animation: ${showup} 10s infinite;
     animation-iteration-count: 1;
   }
   :last-of-type ${HeroTitleSpan} {
-    animation: ${slidein} 2.4s infinite;
+    animation: ${slidein} 2s infinite;
     animation-iteration-count: 1;
   }
   @media (max-width: 1300px){
@@ -146,86 +133,36 @@ const HeroTitle = styled.h1`
     font-size: 30px;
   }
   @media (max-width: 600px){
-    font-size: 28px;
-  }
-  @media (max-width: 400px){
     font-size: 26px;
   }
 `
 
-const HeroSubTitle = styled.h2`
-  margin-bottom: 20px;
-  color: #ced4da;
-  @media (max-width: 1300px){
-    font-size: 21px;
-  }
-  @media (max-width: 900px){
-    font-size: 20px;
-  }
-  @media (max-width: 800px){
-    font-size: 21px;
-  }
-`
 const HeroInfo = styled.p`
   font-size: 17px;
-  margin-bottom: 20px;
+  margin: 10px 0 20px;
   line-height: 22px;
   letter-spacing: 0.4px;
   width: 100%;
   @media (max-width: 1300px){
     font-size: 16px;
   }
+  @media (max-width: 900px){
+    font-size: 15px;
+    width: 90%;
+  }
+  @media (max-width: 800px){
+    font-size: 16px;
+    width: 70%;
+    text-align: center;
+  }
+  @media (max-width: 500px){
+    width: 90%;
+    font-size: 15px;
+  }
 `
 const HeroButtons = styled.div`
   display: flex;
   gap: 10px;
-`
-const HeroButton = styled.button`
-  border: none;
-  border-radius: 4px;
-  padding: 12px 0;
-  width: 140px;
-  background-color: #FF9100;
-  color: #f8f9fa;
-  font-weight: 600;
-  transition: all 0.3s ease 0s;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  :hover {
-    background-color: #FF8500;
-  }
-  @media (max-width: 500px){
-    width: 120px;
-  }
-`
-const HeroButtonCV = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 0;
-  width: 140px;
-  background-color: transparent;
-  color: #f8f9fa;
-  font-weight: 600;
-  transition: all 0.3s ease 0s;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  border: 2px solid #FF9100;
-  :hover {
-    background-color: #FF8500;
-    border: 2px solid #FF8500;
-  }
-  @media (max-width: 500px){
-    width: 120px;
-  }
-`
-const HeroButtonCVIcon = styled.img`
-  width: 15px;
 `
 
 const Hero = () => {
@@ -240,24 +177,20 @@ const Hero = () => {
               <HeroTitle>
                 {t("header.title")}
               </HeroTitle>
-              <HeroTitle>
-                <HeroTitleSpan> Leonel Paez</HeroTitleSpan>
-              </HeroTitle>
             </HeroTitleCont>
-            <HeroSubTitle>Frontend Developer</HeroSubTitle>
+            <HeroTitle>
+              <HeroTitleSpan>Leonel Paez,</HeroTitleSpan>
+            </HeroTitle>
             <HeroInfo>
               {t("header.info")}
             </HeroInfo>
             <HeroButtons>
               <a href="#contact">
-                <HeroButton>{t("header.hireMeButton")}</HeroButton>
+                <Button>{t("header.hireMeButton")}</Button>
               </a>
-              <a href="https://drive.google.com/file/d/1X4smqoNwPleKQGvhFO444Daa0ozyLkow/view?usp=drive_link" target="_blank">
-                <HeroButtonCV>
-                  CV
-                  <HeroButtonCVIcon src={ArrowRight} alt="arrow right" />
-                </HeroButtonCV>
-              </a>
+              <LinkButton to="https://drive.google.com/file/d/1X4smqoNwPleKQGvhFO444Daa0ozyLkow/view?usp=drive_link">
+                CV
+              </LinkButton>
             </HeroButtons>
           </HeroItem>
           <HeroItem>
