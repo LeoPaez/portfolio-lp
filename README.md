@@ -13,3 +13,7 @@ Librerias y herramientas usadas:
 - Framer Motion
 - SweetAlert 2
 - i18next
+
+<p align="center">
+  <img src="https://i.ibb.co/qJfMgdH/Leonel-Paez-Portfolio.png" alt="Foto del proyecto">
+</p>
